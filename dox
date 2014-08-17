@@ -1,0 +1,9 @@
+#!/bin/bash
+
+SPACE=$(pwd)
+
+cd $SPACE/doc
+
+doxygen Doxyfile
+
+cd $SPACE

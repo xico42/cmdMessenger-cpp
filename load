@@ -1,0 +1,38 @@
+##Esse script é responsável por carregar a documentação gerada
+##no doxygen para o github. Ele tbm tira os '_' das páginas geradas
+##pelo doxygen.
+
+#!/bin/bash
+
+mkdir _temp
+
+SPACE=$(pwd)
+
+cp -r ./doc/html/* -t ./_temp/
+
+cd _temp/
+
+#Tira os '_' na frente dos nomes dos arquivos, para que o 
+#jekyll possa processar de forma correta.
+for j in $(ls -1 _*); do
+  string=${j#"_"}
+  grep -rl $j ./ | xargs sed -i "s/$j/$string/g"
+
+  mv $j $string
+done
+
+cd $SPACE
+
+#Deleta conteúdo atual da pasta html (onde esta o branch gh-pages), e copia a documentação.
+rm -r ../html/robot/CmdMessenger/*
+cp -r ./_temp/* -t ../html/robot/CmdMessenger
+
+cd ../html/robot/
+
+git add CmdMessenger/
+git commit -m "automatically loaded documentation"
+git push origin gh-pages
+
+cd $SPACE
+
+rm -r _temp

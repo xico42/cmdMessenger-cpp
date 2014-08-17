@@ -1,0 +1,52 @@
+\hypertarget{_cmd_messenger_8h}{\section{/home/edno/projetos/robot/cmd\+Messenger-\/cpp/include/\+Cmd\+Messenger.h File Reference}
+\label{_cmd_messenger_8h}\index{/home/edno/projetos/robot/cmd\+Messenger-\/cpp/include/\+Cmd\+Messenger.\+h@{/home/edno/projetos/robot/cmd\+Messenger-\/cpp/include/\+Cmd\+Messenger.\+h}}
+}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include \char`\"{}serial/serial.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}callback.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Cmd\+Send.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Cmd\+Received.\+h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classcmd_1_1_cmd_messenger}{cmd\+::\+Cmd\+Messenger}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacecmd}{cmd}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef Cmd\+Send \hyperlink{namespacecmd_af9b58ca395c80edd1335e21d1b9f4c99}{cmd\+::\+Cmd}
+\item 
+typedef \hyperlink{class_c_b_functor1w_ret}{C\+B\+Functor1w\+Ret}\\*
+$<$ Cmd\+Received \&, void $>$ \hyperlink{namespacecmd_a24926dd0c7587e1961fd9ebe0259beea}{cmd\+::\+Call\+Back\+Functor}
+\item 
+typedef void($\ast$ \hyperlink{namespacecmd_a20b40ecd3ba46130eef6c125f70c4121}{cmd\+::\+Call\+Back} )(Cmd\+Received \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Rodrigues Filho 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1
+\end{DoxyVersion}
+\hypertarget{_cmd_messenger_8cpp_LICENSE}{}\subsection{L\+I\+C\+E\+N\+S\+E}\label{_cmd_messenger_8cpp_LICENSE}
+The M\+I\+T License
+
+Copyright (c) 2014 Francisco Edno de Moura Rodrigues Filho
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+T\+H\+E S\+O\+F\+T\+W\+A\+R\+E I\+S P\+R\+O\+V\+I\+D\+E\+D \char`\"{}\+A\+S I\+S\char`\"{}, W\+I\+T\+H\+O\+U\+T W\+A\+R\+R\+A\+N\+T\+Y O\+F A\+N\+Y K\+I\+N\+D, E\+X\+P\+R\+E\+S\+S O\+R I\+M\+P\+L\+I\+E\+D, I\+N\+C\+L\+U\+D\+I\+N\+G B\+U\+T N\+O\+T L\+I\+M\+I\+T\+E\+D T\+O T\+H\+E W\+A\+R\+R\+A\+N\+T\+I\+E\+S O\+F M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y, F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E A\+N\+D N\+O\+N\+I\+N\+F\+R\+I\+N\+G\+E\+M\+E\+N\+T. I\+N N\+O E\+V\+E\+N\+T S\+H\+A\+L\+L T\+H\+E A\+U\+T\+H\+O\+R\+S O\+R C\+O\+P\+Y\+R\+I\+G\+H\+T H\+O\+L\+D\+E\+R\+S B\+E L\+I\+A\+B\+L\+E F\+O\+R A\+N\+Y C\+L\+A\+I\+M, D\+A\+M\+A\+G\+E\+S O\+R O\+T\+H\+E\+R L\+I\+A\+B\+I\+L\+I\+T\+Y, W\+H\+E\+T\+H\+E\+R I\+N A\+N A\+C\+T\+I\+O\+N O\+F C\+O\+N\+T\+R\+A\+C\+T, T\+O\+R\+T O\+R O\+T\+H\+E\+R\+W\+I\+S\+E, A\+R\+I\+S\+I\+N\+G F\+R\+O\+M, O\+U\+T O\+F O\+R I\+N C\+O\+N\+N\+E\+C\+T\+I\+O\+N W\+I\+T\+H T\+H\+E S\+O\+F\+T\+W\+A\+R\+E O\+R T\+H\+E U\+S\+E O\+R O\+T\+H\+E\+R D\+E\+A\+L\+I\+N\+G\+S I\+N T\+H\+E S\+O\+F\+T\+W\+A\+R\+E.\hypertarget{_cmd_received_8h_DESCRIPTION}{}\subsection{D\+E\+S\+C\+R\+I\+P\+T\+I\+O\+N}\label{_cmd_received_8h_DESCRIPTION}
+This provides a cross platform interface to use with the Cmd\+Messenger messaging library. As transport layer the Serial Library, a cross-\/platform, simple to use library for using serial ports on computers by William Woodall (\href{mailto:wjwwood@gmail.com}{\tt wjwwood@gmail.\+com}) and John Harrison (\href{mailto:ash@greaterthaninfinity.com}{\tt ash@greaterthaninfinity.\+com}), was chosen. This is the main interface to use this Cmd\+Messenger implementation. 
+
+Definition in file \hyperlink{_cmd_messenger_8h_source}{Cmd\+Messenger.\+h}.
+

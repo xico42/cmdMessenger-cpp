@@ -1,0 +1,128 @@
+\hypertarget{class_c_b_functor2w_ret}{\section{C\+B\+Functor2w\+Ret$<$ P1, P2, R\+T $>$ Class Template Reference}
+\label{class_c_b_functor2w_ret}\index{C\+B\+Functor2w\+Ret$<$ P1, P2, R\+T $>$@{C\+B\+Functor2w\+Ret$<$ P1, P2, R\+T $>$}}
+}
+
+
+{\ttfamily \#include $<$callback.\+h$>$}
+
+Inheritance diagram for C\+B\+Functor2w\+Ret$<$ P1, P2, R\+T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.485411cm]{class_c_b_functor2w_ret}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef P1 \hyperlink{class_c_b_functor2w_ret_a7d24bfcc6aa65aa4b55b5e959a004dd4}{first\+\_\+argument\+\_\+type}
+\item 
+typedef P2 \hyperlink{class_c_b_functor2w_ret_ab581d0954897537b10bf2de447b8b657}{second\+\_\+argument\+\_\+type}
+\item 
+typedef R\+T \hyperlink{class_c_b_functor2w_ret_a9d2ef5e7ee4eaac99bea7abfdd21af82}{result\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_b_functor2w_ret_adba50ddb99c70b46584e4c479731264e}{C\+B\+Functor2w\+Ret} (\hyperlink{class_c_b_functor_base_1_1_dummy_init}{Dummy\+Init} $\ast$=0)
+\item 
+R\+T \hyperlink{class_c_b_functor2w_ret_ac6c5aa2cc0ec49461fef4031c2550121}{operator()} (P1 p1, P2 p2) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef R\+T($\ast$ \hyperlink{class_c_b_functor2w_ret_a550afb1fd40c4dd859c80dfaa830e3aa}{Thunk} )(const \hyperlink{class_c_b_functor_base}{C\+B\+Functor\+Base} \&, P1, P2)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_b_functor2w_ret_acf220825a2caa6ce6db82f537244ed65}{C\+B\+Functor2w\+Ret} (\hyperlink{class_c_b_functor2w_ret_a550afb1fd40c4dd859c80dfaa830e3aa}{Thunk} t, const void $\ast$c, const void $\ast$f, size\+\_\+t sz)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class P1, class P2, class R\+T$>$class C\+B\+Functor2w\+Ret$<$ P1, P2, R\+T $>$}
+
+
+
+Definition at line 685 of file callback.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_c_b_functor2w_ret_a7d24bfcc6aa65aa4b55b5e959a004dd4}{\index{C\+B\+Functor2w\+Ret@{C\+B\+Functor2w\+Ret}!first\+\_\+argument\+\_\+type@{first\+\_\+argument\+\_\+type}}
+\index{first\+\_\+argument\+\_\+type@{first\+\_\+argument\+\_\+type}!C\+B\+Functor2w\+Ret@{C\+B\+Functor2w\+Ret}}
+\subsubsection[{first\+\_\+argument\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class R\+T $>$ typedef P1 {\bf C\+B\+Functor2w\+Ret}$<$ P1, P2, R\+T $>$\+::{\bf first\+\_\+argument\+\_\+type}}}\label{class_c_b_functor2w_ret_a7d24bfcc6aa65aa4b55b5e959a004dd4}
+
+
+Definition at line 694 of file callback.\+h.
+
+\hypertarget{class_c_b_functor2w_ret_a9d2ef5e7ee4eaac99bea7abfdd21af82}{\index{C\+B\+Functor2w\+Ret@{C\+B\+Functor2w\+Ret}!result\+\_\+type@{result\+\_\+type}}
+\index{result\+\_\+type@{result\+\_\+type}!C\+B\+Functor2w\+Ret@{C\+B\+Functor2w\+Ret}}
+\subsubsection[{result\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class R\+T $>$ typedef R\+T {\bf C\+B\+Functor2w\+Ret}$<$ P1, P2, R\+T $>$\+::{\bf result\+\_\+type}}}\label{class_c_b_functor2w_ret_a9d2ef5e7ee4eaac99bea7abfdd21af82}
+
+
+Definition at line 696 of file callback.\+h.
+
+\hypertarget{class_c_b_functor2w_ret_ab581d0954897537b10bf2de447b8b657}{\index{C\+B\+Functor2w\+Ret@{C\+B\+Functor2w\+Ret}!second\+\_\+argument\+\_\+type@{second\+\_\+argument\+\_\+type}}
+\index{second\+\_\+argument\+\_\+type@{second\+\_\+argument\+\_\+type}!C\+B\+Functor2w\+Ret@{C\+B\+Functor2w\+Ret}}
+\subsubsection[{second\+\_\+argument\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class R\+T $>$ typedef P2 {\bf C\+B\+Functor2w\+Ret}$<$ P1, P2, R\+T $>$\+::{\bf second\+\_\+argument\+\_\+type}}}\label{class_c_b_functor2w_ret_ab581d0954897537b10bf2de447b8b657}
+
+
+Definition at line 695 of file callback.\+h.
+
+\hypertarget{class_c_b_functor2w_ret_a550afb1fd40c4dd859c80dfaa830e3aa}{\index{C\+B\+Functor2w\+Ret@{C\+B\+Functor2w\+Ret}!Thunk@{Thunk}}
+\index{Thunk@{Thunk}!C\+B\+Functor2w\+Ret@{C\+B\+Functor2w\+Ret}}
+\subsubsection[{Thunk}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class R\+T $>$ typedef R\+T($\ast$ {\bf C\+B\+Functor2w\+Ret}$<$ P1, P2, R\+T $>$\+::Thunk)(const {\bf C\+B\+Functor\+Base} \&, P1, P2)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_c_b_functor2w_ret_a550afb1fd40c4dd859c80dfaa830e3aa}
+
+
+Definition at line 698 of file callback.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_b_functor2w_ret_adba50ddb99c70b46584e4c479731264e}{\index{C\+B\+Functor2w\+Ret@{C\+B\+Functor2w\+Ret}!C\+B\+Functor2w\+Ret@{C\+B\+Functor2w\+Ret}}
+\index{C\+B\+Functor2w\+Ret@{C\+B\+Functor2w\+Ret}!C\+B\+Functor2w\+Ret@{C\+B\+Functor2w\+Ret}}
+\subsubsection[{C\+B\+Functor2w\+Ret}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class R\+T $>$ {\bf C\+B\+Functor2w\+Ret}$<$ P1, P2, R\+T $>$\+::{\bf C\+B\+Functor2w\+Ret} (
+\begin{DoxyParamCaption}
+\item[{{\bf Dummy\+Init} $\ast$}]{ = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_c_b_functor2w_ret_adba50ddb99c70b46584e4c479731264e}
+
+
+Definition at line 687 of file callback.\+h.
+
+\hypertarget{class_c_b_functor2w_ret_acf220825a2caa6ce6db82f537244ed65}{\index{C\+B\+Functor2w\+Ret@{C\+B\+Functor2w\+Ret}!C\+B\+Functor2w\+Ret@{C\+B\+Functor2w\+Ret}}
+\index{C\+B\+Functor2w\+Ret@{C\+B\+Functor2w\+Ret}!C\+B\+Functor2w\+Ret@{C\+B\+Functor2w\+Ret}}
+\subsubsection[{C\+B\+Functor2w\+Ret}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class R\+T $>$ {\bf C\+B\+Functor2w\+Ret}$<$ P1, P2, R\+T $>$\+::{\bf C\+B\+Functor2w\+Ret} (
+\begin{DoxyParamCaption}
+\item[{{\bf Thunk}}]{t, }
+\item[{const void $\ast$}]{c, }
+\item[{const void $\ast$}]{f, }
+\item[{size\+\_\+t}]{sz}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{class_c_b_functor2w_ret_acf220825a2caa6ce6db82f537244ed65}
+
+
+Definition at line 699 of file callback.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_b_functor2w_ret_ac6c5aa2cc0ec49461fef4031c2550121}{\index{C\+B\+Functor2w\+Ret@{C\+B\+Functor2w\+Ret}!operator()@{operator()}}
+\index{operator()@{operator()}!C\+B\+Functor2w\+Ret@{C\+B\+Functor2w\+Ret}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class R\+T $>$ R\+T {\bf C\+B\+Functor2w\+Ret}$<$ P1, P2, R\+T $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{P1}]{p1, }
+\item[{P2}]{p2}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_c_b_functor2w_ret_ac6c5aa2cc0ec49461fef4031c2550121}
+
+
+Definition at line 688 of file callback.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/edno/projetos/robot/cmd\+Messenger-\/cpp/include/\hyperlink{callback_8h}{callback.\+h}\end{DoxyCompactItemize}

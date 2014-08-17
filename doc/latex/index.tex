@@ -1,0 +1,30 @@
+\begin{DoxyAuthor}{Author}
+Rodrigues Filho \href{mailto:edno-moura@mail.com}{\tt edno-\/moura@mail.\+com}
+\end{DoxyAuthor}
+\hypertarget{index_what_is}{}\section{What is Cmd\+Messenger?}\label{index_what_is}
+The Cmd\+Messenger is a messaging library for the Arduino platform. To use the Cmd\+Messenger, a list of command identifiers is defined and then, callbacks are attached for the received messages. The message format is as it follows\+: 
+\begin{DoxyPre}
+  cmdID,arg1,arg2,...,argn;
+\end{DoxyPre}
+\hypertarget{index_this_project}{}\section{What is this project all about?}\label{index_this_project}
+This is simply an implementation of such messaging protocol for the pc side, built in a cross-\/platform C++. It uses the Serial Library for its communication, this library provides total control over Timeouts and it is cross-\/platform. The official project of the Cmd\+Messenger provides a full C\# implementation that runs in both Mono and Visual Studio.\hypertarget{index_getting_started}{}\section{Getting Started}\label{index_getting_started}
+Take a look at the main class documentation cmd\+::\+Cmd\+Messenger and the command classes cmd\+::\+Cmd\+Received cmd\+::\+Cmd\+Send
+
+Take a look at this simple example led.\+cpp\hypertarget{index_features}{}\section{Features}\label{index_features}
+
+\begin{DoxyItemize}
+\item Total control over Timeouts trough the Serial Library project.
+\item Send and receive ascii commands.
+\item Clean A\+P\+I with overloaded operators.
+\item Set methods or global functions as callbacks.
+\end{DoxyItemize}\hypertarget{index_problems}{}\section{Problems}\label{index_problems}
+
+\begin{DoxyItemize}
+\item Does not send or receive binary data.
+\item Parsers safety and efficiency needs to be improved.
+\item It's written in cross-\/platform C++, but the project lacks support for other platforms rather than linux.
+\end{DoxyItemize}\hypertarget{index_install}{}\section{Installation}\label{index_install}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]Write the install section 
+
+Remember to find a way to ship all dependecies in one package \end{DoxyRefDesc}

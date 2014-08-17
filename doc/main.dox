@@ -1,0 +1,37 @@
+/*!
+\mainpage CmdMessenger C++ Implementation
+
+\author Rodrigues Filho <edno-moura@mail.com>
+
+\section what_is What is CmdMessenger?
+The CmdMessenger is a messaging library for the Arduino platform. To use the CmdMessenger, a list of command identifiers is defined and then, callbacks are attached for the received messages. The message format is as it follows:
+<pre>
+  cmdID,arg1,arg2,...,argn;
+</pre>
+
+\section this_project What is this project all about?
+This is simply an implementation of such messaging protocol for the pc side, built in a cross-platform C++. It uses the Serial Library for its communication, this library provides total control over Timeouts and it is cross-platform. The official project of the CmdMessenger provides a full C# implementation that runs in both Mono and Visual Studio.
+
+\section getting_started Getting Started
+
+Take a look at the main class documentation \ref cmd::CmdMessenger and the command classes \ref cmd::CmdReceived \ref cmd::CmdSend
+
+Take a look at this simple example \ref led.cpp
+
+\section features Features
+ - Total control over Timeouts trough the Serial Library project.
+ - Send and receive ascii commands.
+ - Clean API with overloaded operators.
+ - Set methods or global functions as callbacks.
+
+\section problems Problems  
+ - Does not send or receive binary data.
+ - Parsers safety and efficiency needs to be improved.
+ - It's written in cross-platform C++, but the project lacks support for other platforms rather than linux.
+
+\section install Installation
+
+\todo Write the install section
+\todo Remember to find a way to ship all dependecies in one package 
+
+*/

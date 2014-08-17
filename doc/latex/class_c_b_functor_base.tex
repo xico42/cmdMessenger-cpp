@@ -1,0 +1,142 @@
+\hypertarget{class_c_b_functor_base}{\section{C\+B\+Functor\+Base Class Reference}
+\label{class_c_b_functor_base}\index{C\+B\+Functor\+Base@{C\+B\+Functor\+Base}}
+}
+
+
+{\ttfamily \#include $<$callback.\+h$>$}
+
+Inheritance diagram for C\+B\+Functor\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_c_b_functor_base}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_c_b_functor_base_1_1_dummy_init}{Dummy\+Init}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef void(C\+B\+Functor\+Base\+::$\ast$ \hyperlink{class_c_b_functor_base_a1fae4d86f8096277b2824602d168ef5a}{\+\_\+\+Mem\+Func} )()
+\item 
+typedef void($\ast$ \hyperlink{class_c_b_functor_base_a36d82f62e1ba03af6b0b24da52d8a96d}{\+\_\+\+Func} )()
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_b_functor_base_ac58bcfd005e23b2fa7e688f1eb95b3e0}{C\+B\+Functor\+Base} ()
+\item 
+\hyperlink{class_c_b_functor_base_a304a1983beadf69db44637eefcc56fee}{C\+B\+Functor\+Base} (const void $\ast$c, const void $\ast$f, size\+\_\+t sz)
+\item 
+\hyperlink{class_c_b_functor_base_a3e132358f2cb0533ab0fe0b833ee0f2d}{operator int} () const 
+\end{DoxyCompactItemize}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>const void $\ast$ \hyperlink{class_c_b_functor_base_a113ee15c661b06d1757b767f85fd6b81}{func}\\
+\>char \hyperlink{class_c_b_functor_base_af64bc23d3a1821de1a1ab2365f98b13c}{memFunc} \mbox{[}sizeof(\hyperlink{class_c_b_functor_base_a1fae4d86f8096277b2824602d168ef5a}{\_MemFunc})\mbox{]}\\
+\}; \\
+
+\end{tabbing}\item 
+void $\ast$ \hyperlink{class_c_b_functor_base_a4350b45a3bc31a07ef188c61ee7af584}{callee}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 224 of file callback.\+h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_c_b_functor_base_a36d82f62e1ba03af6b0b24da52d8a96d}{\index{C\+B\+Functor\+Base@{C\+B\+Functor\+Base}!\+\_\+\+Func@{\+\_\+\+Func}}
+\index{\+\_\+\+Func@{\+\_\+\+Func}!C\+B\+Functor\+Base@{C\+B\+Functor\+Base}}
+\subsubsection[{\+\_\+\+Func}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ C\+B\+Functor\+Base\+::\+\_\+\+Func)()}}\label{class_c_b_functor_base_a36d82f62e1ba03af6b0b24da52d8a96d}
+
+
+Definition at line 227 of file callback.\+h.
+
+\hypertarget{class_c_b_functor_base_a1fae4d86f8096277b2824602d168ef5a}{\index{C\+B\+Functor\+Base@{C\+B\+Functor\+Base}!\+\_\+\+Mem\+Func@{\+\_\+\+Mem\+Func}}
+\index{\+\_\+\+Mem\+Func@{\+\_\+\+Mem\+Func}!C\+B\+Functor\+Base@{C\+B\+Functor\+Base}}
+\subsubsection[{\+\_\+\+Mem\+Func}]{\setlength{\rightskip}{0pt plus 5cm}typedef void(C\+B\+Functor\+Base\+::$\ast$ C\+B\+Functor\+Base\+::\+\_\+\+Mem\+Func)()}}\label{class_c_b_functor_base_a1fae4d86f8096277b2824602d168ef5a}
+
+
+Definition at line 226 of file callback.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_c_b_functor_base_ac58bcfd005e23b2fa7e688f1eb95b3e0}{\index{C\+B\+Functor\+Base@{C\+B\+Functor\+Base}!C\+B\+Functor\+Base@{C\+B\+Functor\+Base}}
+\index{C\+B\+Functor\+Base@{C\+B\+Functor\+Base}!C\+B\+Functor\+Base@{C\+B\+Functor\+Base}}
+\subsubsection[{C\+B\+Functor\+Base}]{\setlength{\rightskip}{0pt plus 5cm}C\+B\+Functor\+Base\+::\+C\+B\+Functor\+Base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_c_b_functor_base_ac58bcfd005e23b2fa7e688f1eb95b3e0}
+
+
+Definition at line 228 of file callback.\+h.
+
+\hypertarget{class_c_b_functor_base_a304a1983beadf69db44637eefcc56fee}{\index{C\+B\+Functor\+Base@{C\+B\+Functor\+Base}!C\+B\+Functor\+Base@{C\+B\+Functor\+Base}}
+\index{C\+B\+Functor\+Base@{C\+B\+Functor\+Base}!C\+B\+Functor\+Base@{C\+B\+Functor\+Base}}
+\subsubsection[{C\+B\+Functor\+Base}]{\setlength{\rightskip}{0pt plus 5cm}C\+B\+Functor\+Base\+::\+C\+B\+Functor\+Base (
+\begin{DoxyParamCaption}
+\item[{const void $\ast$}]{c, }
+\item[{const void $\ast$}]{f, }
+\item[{size\+\_\+t}]{sz}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_c_b_functor_base_a304a1983beadf69db44637eefcc56fee}
+
+
+Definition at line 229 of file callback.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_b_functor_base_a3e132358f2cb0533ab0fe0b833ee0f2d}{\index{C\+B\+Functor\+Base@{C\+B\+Functor\+Base}!operator int@{operator int}}
+\index{operator int@{operator int}!C\+B\+Functor\+Base@{C\+B\+Functor\+Base}}
+\subsubsection[{operator int}]{\setlength{\rightskip}{0pt plus 5cm}C\+B\+Functor\+Base\+::operator int (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_c_b_functor_base_a3e132358f2cb0533ab0fe0b833ee0f2d}
+
+
+Definition at line 242 of file callback.\+h.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{class_c_b_functor_base_a00eb989ae13109b14f49f2b82461e1c9}{\subsubsection[{"@1}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }}\label{class_c_b_functor_base_a00eb989ae13109b14f49f2b82461e1c9}
+\hypertarget{class_c_b_functor_base_a4350b45a3bc31a07ef188c61ee7af584}{\index{C\+B\+Functor\+Base@{C\+B\+Functor\+Base}!callee@{callee}}
+\index{callee@{callee}!C\+B\+Functor\+Base@{C\+B\+Functor\+Base}}
+\subsubsection[{callee}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ C\+B\+Functor\+Base\+::callee}}\label{class_c_b_functor_base_a4350b45a3bc31a07ef188c61ee7af584}
+
+
+Definition at line 255 of file callback.\+h.
+
+\hypertarget{class_c_b_functor_base_a113ee15c661b06d1757b767f85fd6b81}{\index{C\+B\+Functor\+Base@{C\+B\+Functor\+Base}!func@{func}}
+\index{func@{func}!C\+B\+Functor\+Base@{C\+B\+Functor\+Base}}
+\subsubsection[{func}]{\setlength{\rightskip}{0pt plus 5cm}const void$\ast$ C\+B\+Functor\+Base\+::func}}\label{class_c_b_functor_base_a113ee15c661b06d1757b767f85fd6b81}
+
+
+Definition at line 252 of file callback.\+h.
+
+\hypertarget{class_c_b_functor_base_af64bc23d3a1821de1a1ab2365f98b13c}{\index{C\+B\+Functor\+Base@{C\+B\+Functor\+Base}!mem\+Func@{mem\+Func}}
+\index{mem\+Func@{mem\+Func}!C\+B\+Functor\+Base@{C\+B\+Functor\+Base}}
+\subsubsection[{mem\+Func}]{\setlength{\rightskip}{0pt plus 5cm}char C\+B\+Functor\+Base\+::mem\+Func\mbox{[}sizeof({\bf \+\_\+\+Mem\+Func})\mbox{]}}}\label{class_c_b_functor_base_af64bc23d3a1821de1a1ab2365f98b13c}
+
+
+Definition at line 253 of file callback.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/edno/projetos/robot/cmd\+Messenger-\/cpp/include/\hyperlink{callback_8h}{callback.\+h}\end{DoxyCompactItemize}

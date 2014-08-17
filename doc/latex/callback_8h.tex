@@ -1,0 +1,852 @@
+\hypertarget{callback_8h}{\section{/home/edno/projetos/robot/cmd\+Messenger-\/cpp/include/callback.h File Reference}
+\label{callback_8h}\index{/home/edno/projetos/robot/cmd\+Messenger-\/cpp/include/callback.\+h@{/home/edno/projetos/robot/cmd\+Messenger-\/cpp/include/callback.\+h}}
+}
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stddef.\+h$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_c_b_functor_base}{C\+B\+Functor\+Base}
+\item 
+class \hyperlink{class_c_b_functor_base_1_1_dummy_init}{C\+B\+Functor\+Base\+::\+Dummy\+Init}
+\item 
+class \hyperlink{class_c_b_functor0}{C\+B\+Functor0}
+\item 
+class \hyperlink{class_c_b_member_translator0}{C\+B\+Member\+Translator0$<$ Callee, Mem\+Func $>$}
+\item 
+class \hyperlink{class_c_b_function_translator0}{C\+B\+Function\+Translator0$<$ Func $>$}
+\item 
+class \hyperlink{class_c_b_functor0w_ret}{C\+B\+Functor0w\+Ret$<$ R\+T $>$}
+\item 
+class \hyperlink{class_c_b_member_translator0w_ret}{C\+B\+Member\+Translator0w\+Ret$<$ R\+T, Callee, Mem\+Func $>$}
+\item 
+class \hyperlink{class_c_b_function_translator0w_ret}{C\+B\+Function\+Translator0w\+Ret$<$ R\+T, Func $>$}
+\item 
+class \hyperlink{class_c_b_functor1}{C\+B\+Functor1$<$ P1 $>$}
+\item 
+class \hyperlink{class_c_b_member_translator1}{C\+B\+Member\+Translator1$<$ P1, Callee, Mem\+Func $>$}
+\item 
+class \hyperlink{class_c_b_function_translator1}{C\+B\+Function\+Translator1$<$ P1, Func $>$}
+\item 
+class \hyperlink{class_c_b_member_of1st_arg_translator1}{C\+B\+Member\+Of1st\+Arg\+Translator1$<$ P1, Mem\+Func $>$}
+\item 
+class \hyperlink{class_c_b_functor1w_ret}{C\+B\+Functor1w\+Ret$<$ P1, R\+T $>$}
+\item 
+class \hyperlink{class_c_b_member_translator1w_ret}{C\+B\+Member\+Translator1w\+Ret$<$ P1, R\+T, Callee, Mem\+Func $>$}
+\item 
+class \hyperlink{class_c_b_function_translator1w_ret}{C\+B\+Function\+Translator1w\+Ret$<$ P1, R\+T, Func $>$}
+\item 
+class \hyperlink{class_c_b_member_of1st_arg_translator1w_ret}{C\+B\+Member\+Of1st\+Arg\+Translator1w\+Ret$<$ P1, R\+T, Mem\+Func $>$}
+\item 
+class \hyperlink{class_c_b_functor2}{C\+B\+Functor2$<$ P1, P2 $>$}
+\item 
+class \hyperlink{class_c_b_member_translator2}{C\+B\+Member\+Translator2$<$ P1, P2, Callee, Mem\+Func $>$}
+\item 
+class \hyperlink{class_c_b_function_translator2}{C\+B\+Function\+Translator2$<$ P1, P2, Func $>$}
+\item 
+class \hyperlink{class_c_b_member_of1st_arg_translator2}{C\+B\+Member\+Of1st\+Arg\+Translator2$<$ P1, P2, Mem\+Func $>$}
+\item 
+class \hyperlink{class_c_b_functor2w_ret}{C\+B\+Functor2w\+Ret$<$ P1, P2, R\+T $>$}
+\item 
+class \hyperlink{class_c_b_member_translator2w_ret}{C\+B\+Member\+Translator2w\+Ret$<$ P1, P2, R\+T, Callee, Mem\+Func $>$}
+\item 
+class \hyperlink{class_c_b_function_translator2w_ret}{C\+B\+Function\+Translator2w\+Ret$<$ P1, P2, R\+T, Func $>$}
+\item 
+class \hyperlink{class_c_b_member_of1st_arg_translator2w_ret}{C\+B\+Member\+Of1st\+Arg\+Translator2w\+Ret$<$ P1, P2, R\+T, Mem\+Func $>$}
+\item 
+class \hyperlink{class_c_b_functor3}{C\+B\+Functor3$<$ P1, P2, P3 $>$}
+\item 
+class \hyperlink{class_c_b_member_translator3}{C\+B\+Member\+Translator3$<$ P1, P2, P3, Callee, Mem\+Func $>$}
+\item 
+class \hyperlink{class_c_b_function_translator3}{C\+B\+Function\+Translator3$<$ P1, P2, P3, Func $>$}
+\item 
+class \hyperlink{class_c_b_member_of1st_arg_translator3}{C\+B\+Member\+Of1st\+Arg\+Translator3$<$ P1, P2, P3, Mem\+Func $>$}
+\item 
+class \hyperlink{class_c_b_functor3w_ret}{C\+B\+Functor3w\+Ret$<$ P1, P2, P3, R\+T $>$}
+\item 
+class \hyperlink{class_c_b_member_translator3w_ret}{C\+B\+Member\+Translator3w\+Ret$<$ P1, P2, P3, R\+T, Callee, Mem\+Func $>$}
+\item 
+class \hyperlink{class_c_b_function_translator3w_ret}{C\+B\+Function\+Translator3w\+Ret$<$ P1, P2, P3, R\+T, Func $>$}
+\item 
+class \hyperlink{class_c_b_member_of1st_arg_translator3w_ret}{C\+B\+Member\+Of1st\+Arg\+Translator3w\+Ret$<$ P1, P2, P3, R\+T, Mem\+Func $>$}
+\item 
+class \hyperlink{class_c_b_functor4}{C\+B\+Functor4$<$ P1, P2, P3, P4 $>$}
+\item 
+class \hyperlink{class_c_b_member_translator4}{C\+B\+Member\+Translator4$<$ P1, P2, P3, P4, Callee, Mem\+Func $>$}
+\item 
+class \hyperlink{class_c_b_function_translator4}{C\+B\+Function\+Translator4$<$ P1, P2, P3, P4, Func $>$}
+\item 
+class \hyperlink{class_c_b_member_of1st_arg_translator4}{C\+B\+Member\+Of1st\+Arg\+Translator4$<$ P1, P2, P3, P4, Mem\+Func $>$}
+\item 
+class \hyperlink{class_c_b_functor4w_ret}{C\+B\+Functor4w\+Ret$<$ P1, P2, P3, P4, R\+T $>$}
+\item 
+class \hyperlink{class_c_b_member_translator4w_ret}{C\+B\+Member\+Translator4w\+Ret$<$ P1, P2, P3, P4, R\+T, Callee, Mem\+Func $>$}
+\item 
+class \hyperlink{class_c_b_function_translator4w_ret}{C\+B\+Function\+Translator4w\+Ret$<$ P1, P2, P3, P4, R\+T, Func $>$}
+\item 
+class \hyperlink{class_c_b_member_of1st_arg_translator4w_ret}{C\+B\+Member\+Of1st\+Arg\+Translator4w\+Ret$<$ P1, P2, P3, P4, R\+T, Mem\+Func $>$}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{callback_8h_a39ae3eb0355dd281e19ad7aaf9066666}{B\+C4\+\_\+\+R\+E\+T\+\_\+\+B\+U\+G}(x)~x
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Callee , class T\+R\+T , class Call\+Type $>$ }\\\hyperlink{class_c_b_member_translator0}{C\+B\+Member\+Translator0}$<$ Callee, \\*
+T\+R\+T(Call\+Type\+::$\ast$)()$>$ \hyperlink{callback_8h_aeed79d4ab5ab2a84f409fecf4c27f70c}{make\+Functor} (\hyperlink{class_c_b_functor0}{C\+B\+Functor0} $\ast$, Callee \&c, T\+R\+T(Call\+Type\+::$\ast$const \&f)())
+\item 
+{\footnotesize template$<$class Callee , class T\+R\+T , class Call\+Type $>$ }\\\hyperlink{class_c_b_member_translator0}{C\+B\+Member\+Translator0}$<$ const \\*
+Callee, T\+R\+T(Call\+Type\+::$\ast$)() \\*
+const  $>$ \hyperlink{callback_8h_ae18fa05d2027346c574d8a4c021b47a6}{make\+Functor} (\hyperlink{class_c_b_functor0}{C\+B\+Functor0} $\ast$, const Callee \&c, T\+R\+T(Call\+Type\+::$\ast$const \&f)() const)
+\item 
+{\footnotesize template$<$class T\+R\+T $>$ }\\\hyperlink{class_c_b_function_translator0}{C\+B\+Function\+Translator0}$<$ T\+R\+T($\ast$)()$>$ \hyperlink{callback_8h_a2dfb7f039435c07ed3c9182d362a507b}{make\+Functor} (\hyperlink{class_c_b_functor0}{C\+B\+Functor0} $\ast$, T\+R\+T($\ast$f)())
+\item 
+{\footnotesize template$<$class R\+T , class Callee , class T\+R\+T , class Call\+Type $>$ }\\\hyperlink{class_c_b_member_translator0w_ret}{C\+B\+Member\+Translator0w\+Ret}$<$ R\+T, \\*
+Callee, T\+R\+T(Call\+Type\+::$\ast$)()$>$ \hyperlink{callback_8h_ac0eace7255bdbc552cb5b29e314c229d}{make\+Functor} (\hyperlink{class_c_b_functor0w_ret}{C\+B\+Functor0w\+Ret}$<$ R\+T $>$ $\ast$, Callee \&c, T\+R\+T(Call\+Type\+::$\ast$const \&f)())
+\item 
+{\footnotesize template$<$class R\+T , class Callee , class T\+R\+T , class Call\+Type $>$ }\\\hyperlink{class_c_b_member_translator0w_ret}{C\+B\+Member\+Translator0w\+Ret}$<$ R\+T, \\*
+const Callee, T\+R\+T(Call\+Type\+::$\ast$)() \\*
+const  $>$ \hyperlink{callback_8h_ad994cc9481c0a7b4f26446dcc3a31d5d}{make\+Functor} (\hyperlink{class_c_b_functor0w_ret}{C\+B\+Functor0w\+Ret}$<$ R\+T $>$ $\ast$, const Callee \&c, T\+R\+T(Call\+Type\+::$\ast$const \&f)() const)
+\item 
+{\footnotesize template$<$class R\+T , class T\+R\+T $>$ }\\\hyperlink{class_c_b_function_translator0w_ret}{C\+B\+Function\+Translator0w\+Ret}$<$ R\+T, \\*
+T\+R\+T($\ast$)()$>$ \hyperlink{callback_8h_adc96cc065e5423aeb448e779171535d3}{make\+Functor} (\hyperlink{class_c_b_functor0w_ret}{C\+B\+Functor0w\+Ret}$<$ R\+T $>$ $\ast$, T\+R\+T($\ast$f)())
+\item 
+{\footnotesize template$<$class P1 , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 $>$ }\\\hyperlink{class_c_b_member_translator1}{C\+B\+Member\+Translator1}$<$ P1, \\*
+Callee, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1)$>$ \hyperlink{callback_8h_a68153d97e1ebe65e6531847726f3256c}{make\+Functor} (\hyperlink{class_c_b_functor1}{C\+B\+Functor1}$<$ P1 $>$ $\ast$, Callee \&c, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1))
+\item 
+{\footnotesize template$<$class P1 , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 $>$ }\\\hyperlink{class_c_b_member_translator1}{C\+B\+Member\+Translator1}$<$ P1, const \\*
+Callee, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1) \\*
+const  $>$ \hyperlink{callback_8h_a02d41a3fe52d2bf21e1c76428c3e309a}{make\+Functor} (\hyperlink{class_c_b_functor1}{C\+B\+Functor1}$<$ P1 $>$ $\ast$, const Callee \&c, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1) const)
+\item 
+{\footnotesize template$<$class P1 , class T\+R\+T , class T\+P1 $>$ }\\\hyperlink{class_c_b_function_translator1}{C\+B\+Function\+Translator1}$<$ P1, T\+R\+T($\ast$)(T\+P1)$>$ \hyperlink{callback_8h_a85a6002e1b8cdbf0f5fca4d51b9b404b}{make\+Functor} (\hyperlink{class_c_b_functor1}{C\+B\+Functor1}$<$ P1 $>$ $\ast$, T\+R\+T($\ast$f)(T\+P1))
+\item 
+{\footnotesize template$<$class P1 , class T\+R\+T , class Call\+Type $>$ }\\\hyperlink{class_c_b_member_of1st_arg_translator1}{C\+B\+Member\+Of1st\+Arg\+Translator1}\\*
+$<$ P1, T\+R\+T(Call\+Type\+::$\ast$)()$>$ \hyperlink{callback_8h_ad04d86f93a128ec182d45dc93f5b4903}{make\+Functor} (\hyperlink{class_c_b_functor1}{C\+B\+Functor1}$<$ P1 $>$ $\ast$, T\+R\+T(Call\+Type\+::$\ast$const \&f)())
+\item 
+{\footnotesize template$<$class P1 , class T\+R\+T , class Call\+Type $>$ }\\\hyperlink{class_c_b_member_of1st_arg_translator1}{C\+B\+Member\+Of1st\+Arg\+Translator1}\\*
+$<$ P1, T\+R\+T(Call\+Type\+::$\ast$)() const  $>$ \hyperlink{callback_8h_a5a1ff87938078b2c5de87264aadb74db}{make\+Functor} (\hyperlink{class_c_b_functor1}{C\+B\+Functor1}$<$ P1 $>$ $\ast$, T\+R\+T(Call\+Type\+::$\ast$const \&f)() const)
+\item 
+{\footnotesize template$<$class P1 , class R\+T , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 $>$ }\\\hyperlink{class_c_b_member_translator1w_ret}{C\+B\+Member\+Translator1w\+Ret}$<$ P1, \\*
+R\+T, Callee, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1)$>$ \hyperlink{callback_8h_ac138424b465577a882ec8b8659777e55}{make\+Functor} (\hyperlink{class_c_b_functor1w_ret}{C\+B\+Functor1w\+Ret}$<$ P1, R\+T $>$ $\ast$, Callee \&c, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1))
+\item 
+{\footnotesize template$<$class P1 , class R\+T , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 $>$ }\\\hyperlink{class_c_b_member_translator1w_ret}{C\+B\+Member\+Translator1w\+Ret}$<$ P1, \\*
+R\+T, const Callee, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1) \\*
+const  $>$ \hyperlink{callback_8h_afafd69b562e7568827c42c6eb0cb3940}{make\+Functor} (\hyperlink{class_c_b_functor1w_ret}{C\+B\+Functor1w\+Ret}$<$ P1, R\+T $>$ $\ast$, const Callee \&c, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1) const)
+\item 
+{\footnotesize template$<$class P1 , class R\+T , class T\+R\+T , class T\+P1 $>$ }\\\hyperlink{class_c_b_function_translator1w_ret}{C\+B\+Function\+Translator1w\+Ret}$<$ P1, \\*
+R\+T, T\+R\+T($\ast$)(T\+P1)$>$ \hyperlink{callback_8h_a0a812d7894464f4c3dd67742e9484656}{make\+Functor} (\hyperlink{class_c_b_functor1w_ret}{C\+B\+Functor1w\+Ret}$<$ P1, R\+T $>$ $\ast$, T\+R\+T($\ast$f)(T\+P1))
+\item 
+{\footnotesize template$<$class P1 , class R\+T , class T\+R\+T , class Call\+Type $>$ }\\\hyperlink{class_c_b_member_of1st_arg_translator1w_ret}{C\+B\+Member\+Of1st\+Arg\+Translator1w\+Ret}\\*
+$<$ P1, R\+T, T\+R\+T(Call\+Type\+::$\ast$)()$>$ \hyperlink{callback_8h_a069c7a6ff319747ef99e54173d3e5cc2}{make\+Functor} (\hyperlink{class_c_b_functor1w_ret}{C\+B\+Functor1w\+Ret}$<$ P1, R\+T $>$ $\ast$, T\+R\+T(Call\+Type\+::$\ast$const \&f)())
+\item 
+{\footnotesize template$<$class P1 , class R\+T , class T\+R\+T , class Call\+Type $>$ }\\\hyperlink{class_c_b_member_of1st_arg_translator1w_ret}{C\+B\+Member\+Of1st\+Arg\+Translator1w\+Ret}\\*
+$<$ P1, R\+T, T\+R\+T(Call\+Type\+::$\ast$)() \\*
+const  $>$ \hyperlink{callback_8h_acbaafb355d6968db6a30e8b4c9ee4f42}{make\+Functor} (\hyperlink{class_c_b_functor1w_ret}{C\+B\+Functor1w\+Ret}$<$ P1, R\+T $>$ $\ast$, T\+R\+T(Call\+Type\+::$\ast$const \&f)() const)
+\item 
+{\footnotesize template$<$class P1 , class P2 , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 $>$ }\\\hyperlink{class_c_b_member_translator2}{C\+B\+Member\+Translator2}$<$ P1, P2, \\*
+Callee, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1, \\*
+T\+P2)$>$ \hyperlink{callback_8h_a0115d5f817642722d65875cfa21a6d47}{make\+Functor} (\hyperlink{class_c_b_functor2}{C\+B\+Functor2}$<$ P1, P2 $>$ $\ast$, Callee \&c, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1, T\+P2))
+\item 
+{\footnotesize template$<$class P1 , class P2 , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 $>$ }\\\hyperlink{class_c_b_member_translator2}{C\+B\+Member\+Translator2}$<$ P1, P2, \\*
+const Callee, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1, \\*
+T\+P2) const  $>$ \hyperlink{callback_8h_ad4d4fe9e5bc7b82cebb229b88015306d}{make\+Functor} (\hyperlink{class_c_b_functor2}{C\+B\+Functor2}$<$ P1, P2 $>$ $\ast$, const Callee \&c, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1, T\+P2) const)
+\item 
+{\footnotesize template$<$class P1 , class P2 , class T\+R\+T , class T\+P1 , class T\+P2 $>$ }\\\hyperlink{class_c_b_function_translator2}{C\+B\+Function\+Translator2}$<$ P1, P2, \\*
+T\+R\+T($\ast$)(T\+P1, T\+P2)$>$ \hyperlink{callback_8h_adeac21b65bd1c3f1ed247044739c455f}{make\+Functor} (\hyperlink{class_c_b_functor2}{C\+B\+Functor2}$<$ P1, P2 $>$ $\ast$, T\+R\+T($\ast$f)(T\+P1, T\+P2))
+\item 
+{\footnotesize template$<$class P1 , class P2 , class T\+R\+T , class Call\+Type , class T\+P1 $>$ }\\\hyperlink{class_c_b_member_of1st_arg_translator2}{C\+B\+Member\+Of1st\+Arg\+Translator2}\\*
+$<$ P1, P2, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1)$>$ \hyperlink{callback_8h_aa00a652564f884e96fdaac919de47ac7}{make\+Functor} (\hyperlink{class_c_b_functor2}{C\+B\+Functor2}$<$ P1, P2 $>$ $\ast$, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1))
+\item 
+{\footnotesize template$<$class P1 , class P2 , class T\+R\+T , class Call\+Type , class T\+P1 $>$ }\\\hyperlink{class_c_b_member_of1st_arg_translator2}{C\+B\+Member\+Of1st\+Arg\+Translator2}\\*
+$<$ P1, P2, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1) \\*
+const  $>$ \hyperlink{callback_8h_a716aa6bc207ff9d8a8aeb3ab0e28e546}{make\+Functor} (\hyperlink{class_c_b_functor2}{C\+B\+Functor2}$<$ P1, P2 $>$ $\ast$, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1) const)
+\item 
+{\footnotesize template$<$class P1 , class P2 , class R\+T , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 $>$ }\\\hyperlink{class_c_b_member_translator2w_ret}{C\+B\+Member\+Translator2w\+Ret}$<$ P1, \\*
+P2, R\+T, Callee, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1, \\*
+T\+P2)$>$ \hyperlink{callback_8h_a09f9e715226b2087aeca8e3c77b930ae}{make\+Functor} (\hyperlink{class_c_b_functor2w_ret}{C\+B\+Functor2w\+Ret}$<$ P1, P2, R\+T $>$ $\ast$, Callee \&c, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1, T\+P2))
+\item 
+{\footnotesize template$<$class P1 , class P2 , class R\+T , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 $>$ }\\\hyperlink{class_c_b_member_translator2w_ret}{C\+B\+Member\+Translator2w\+Ret}$<$ P1, \\*
+P2, R\+T, const Callee, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1, \\*
+T\+P2) const  $>$ \hyperlink{callback_8h_a6e4c4cdba97a187290cd9bef19719f94}{make\+Functor} (\hyperlink{class_c_b_functor2w_ret}{C\+B\+Functor2w\+Ret}$<$ P1, P2, R\+T $>$ $\ast$, const Callee \&c, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1, T\+P2) const)
+\item 
+{\footnotesize template$<$class P1 , class P2 , class R\+T , class T\+R\+T , class T\+P1 , class T\+P2 $>$ }\\\hyperlink{class_c_b_function_translator2w_ret}{C\+B\+Function\+Translator2w\+Ret}$<$ P1, \\*
+P2, R\+T, T\+R\+T($\ast$)(T\+P1, T\+P2)$>$ \hyperlink{callback_8h_a2adb7d7b77985906bc24af30b8ecd9fc}{make\+Functor} (\hyperlink{class_c_b_functor2w_ret}{C\+B\+Functor2w\+Ret}$<$ P1, P2, R\+T $>$ $\ast$, T\+R\+T($\ast$f)(T\+P1, T\+P2))
+\item 
+{\footnotesize template$<$class P1 , class P2 , class R\+T , class T\+R\+T , class Call\+Type , class T\+P1 $>$ }\\\hyperlink{class_c_b_member_of1st_arg_translator2w_ret}{C\+B\+Member\+Of1st\+Arg\+Translator2w\+Ret}\\*
+$<$ P1, P2, R\+T, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1)$>$ \hyperlink{callback_8h_a9760da25dbc0d63d351d7dcb9c1b7b87}{make\+Functor} (\hyperlink{class_c_b_functor2w_ret}{C\+B\+Functor2w\+Ret}$<$ P1, P2, R\+T $>$ $\ast$, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1))
+\item 
+{\footnotesize template$<$class P1 , class P2 , class R\+T , class T\+R\+T , class Call\+Type , class T\+P1 $>$ }\\\hyperlink{class_c_b_member_of1st_arg_translator2w_ret}{C\+B\+Member\+Of1st\+Arg\+Translator2w\+Ret}\\*
+$<$ P1, P2, R\+T, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1) \\*
+const  $>$ \hyperlink{callback_8h_aa5eaf4e09fcc3cfe74173a43a2042379}{make\+Functor} (\hyperlink{class_c_b_functor2w_ret}{C\+B\+Functor2w\+Ret}$<$ P1, P2, R\+T $>$ $\ast$, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1) const)
+\item 
+{\footnotesize template$<$class P1 , class P2 , class P3 , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 $>$ }\\\hyperlink{class_c_b_member_translator3}{C\+B\+Member\+Translator3}$<$ P1, P2, \\*
+P3, Callee, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1, \\*
+T\+P2, T\+P3)$>$ \hyperlink{callback_8h_a7e6e1dfca1a3b36d8a16326db92c4c57}{make\+Functor} (\hyperlink{class_c_b_functor3}{C\+B\+Functor3}$<$ P1, P2, P3 $>$ $\ast$, Callee \&c, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1, T\+P2, T\+P3))
+\item 
+{\footnotesize template$<$class P1 , class P2 , class P3 , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 $>$ }\\\hyperlink{class_c_b_member_translator3}{C\+B\+Member\+Translator3}$<$ P1, P2, \\*
+P3, const Callee, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1, \\*
+T\+P2, T\+P3) const  $>$ \hyperlink{callback_8h_a89e37c34ea14f63911b0e318dab6137f}{make\+Functor} (\hyperlink{class_c_b_functor3}{C\+B\+Functor3}$<$ P1, P2, P3 $>$ $\ast$, const Callee \&c, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1, T\+P2, T\+P3) const)
+\item 
+{\footnotesize template$<$class P1 , class P2 , class P3 , class T\+R\+T , class T\+P1 , class T\+P2 , class T\+P3 $>$ }\\\hyperlink{class_c_b_function_translator3}{C\+B\+Function\+Translator3}$<$ P1, P2, \\*
+P3, T\+R\+T($\ast$)(T\+P1, T\+P2, T\+P3)$>$ \hyperlink{callback_8h_a7bfc90c80db51b9f26c2d4c8f705d614}{make\+Functor} (\hyperlink{class_c_b_functor3}{C\+B\+Functor3}$<$ P1, P2, P3 $>$ $\ast$, T\+R\+T($\ast$f)(T\+P1, T\+P2, T\+P3))
+\item 
+{\footnotesize template$<$class P1 , class P2 , class P3 , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 $>$ }\\\hyperlink{class_c_b_member_of1st_arg_translator3}{C\+B\+Member\+Of1st\+Arg\+Translator3}\\*
+$<$ P1, P2, P3, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1, \\*
+T\+P2)$>$ \hyperlink{callback_8h_a13f9f14cd101ca20ab41970c320f2339}{make\+Functor} (\hyperlink{class_c_b_functor3}{C\+B\+Functor3}$<$ P1, P2, P3 $>$ $\ast$, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1, T\+P2))
+\item 
+{\footnotesize template$<$class P1 , class P2 , class P3 , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 $>$ }\\\hyperlink{class_c_b_member_of1st_arg_translator3}{C\+B\+Member\+Of1st\+Arg\+Translator3}\\*
+$<$ P1, P2, P3, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1, \\*
+T\+P2) const  $>$ \hyperlink{callback_8h_aba4262ea1b5b8e3fafbb2f1e853a8a8e}{make\+Functor} (\hyperlink{class_c_b_functor3}{C\+B\+Functor3}$<$ P1, P2, P3 $>$ $\ast$, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1, T\+P2) const)
+\item 
+{\footnotesize template$<$class P1 , class P2 , class P3 , class R\+T , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 $>$ }\\\hyperlink{class_c_b_member_translator3w_ret}{C\+B\+Member\+Translator3w\+Ret}$<$ P1, \\*
+P2, P3, R\+T, Callee, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1, \\*
+T\+P2, T\+P3)$>$ \hyperlink{callback_8h_adedc4c9917bbd2a282eeef090455bb94}{make\+Functor} (\hyperlink{class_c_b_functor3w_ret}{C\+B\+Functor3w\+Ret}$<$ P1, P2, P3, R\+T $>$ $\ast$, Callee \&c, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1, T\+P2, T\+P3))
+\item 
+{\footnotesize template$<$class P1 , class P2 , class P3 , class R\+T , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 $>$ }\\\hyperlink{class_c_b_member_translator3w_ret}{C\+B\+Member\+Translator3w\+Ret}$<$ P1, \\*
+P2, P3, R\+T, const Callee, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1, \\*
+T\+P2, T\+P3) const  $>$ \hyperlink{callback_8h_ad0c95ceb99a3e1fa7d0e1f76addd7011}{make\+Functor} (\hyperlink{class_c_b_functor3w_ret}{C\+B\+Functor3w\+Ret}$<$ P1, P2, P3, R\+T $>$ $\ast$, const Callee \&c, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1, T\+P2, T\+P3) const)
+\item 
+{\footnotesize template$<$class P1 , class P2 , class P3 , class R\+T , class T\+R\+T , class T\+P1 , class T\+P2 , class T\+P3 $>$ }\\\hyperlink{class_c_b_function_translator3w_ret}{C\+B\+Function\+Translator3w\+Ret}$<$ P1, \\*
+P2, P3, R\+T, T\+R\+T($\ast$)(T\+P1, T\+P2, \\*
+T\+P3)$>$ \hyperlink{callback_8h_ae8e8f3c361bd452de65487539c6c47a0}{make\+Functor} (\hyperlink{class_c_b_functor3w_ret}{C\+B\+Functor3w\+Ret}$<$ P1, P2, P3, R\+T $>$ $\ast$, T\+R\+T($\ast$f)(T\+P1, T\+P2, T\+P3))
+\item 
+{\footnotesize template$<$class P1 , class P2 , class P3 , class R\+T , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 $>$ }\\\hyperlink{class_c_b_member_of1st_arg_translator3w_ret}{C\+B\+Member\+Of1st\+Arg\+Translator3w\+Ret}\\*
+$<$ P1, P2, P3, R\+T, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1, \\*
+T\+P2)$>$ \hyperlink{callback_8h_ac08535ce546108b9afc52db068b85ee0}{make\+Functor} (\hyperlink{class_c_b_functor3w_ret}{C\+B\+Functor3w\+Ret}$<$ P1, P2, P3, R\+T $>$ $\ast$, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1, T\+P2))
+\item 
+{\footnotesize template$<$class P1 , class P2 , class P3 , class R\+T , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 $>$ }\\\hyperlink{class_c_b_member_of1st_arg_translator3w_ret}{C\+B\+Member\+Of1st\+Arg\+Translator3w\+Ret}\\*
+$<$ P1, P2, P3, R\+T, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1, \\*
+T\+P2) const  $>$ \hyperlink{callback_8h_a9205bcca9e490301907f864e1ed892cd}{make\+Functor} (\hyperlink{class_c_b_functor3w_ret}{C\+B\+Functor3w\+Ret}$<$ P1, P2, P3, R\+T $>$ $\ast$, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1, T\+P2) const)
+\item 
+{\footnotesize template$<$class P1 , class P2 , class P3 , class P4 , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 , class T\+P4 $>$ }\\\hyperlink{class_c_b_member_translator4}{C\+B\+Member\+Translator4}$<$ P1, P2, \\*
+P3, P4, Callee, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1, \\*
+T\+P2, T\+P3, T\+P4)$>$ \hyperlink{callback_8h_a2968081b83beebedee9d0686c01f6de4}{make\+Functor} (\hyperlink{class_c_b_functor4}{C\+B\+Functor4}$<$ P1, P2, P3, P4 $>$ $\ast$, Callee \&c, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1, T\+P2, T\+P3, T\+P4))
+\item 
+{\footnotesize template$<$class P1 , class P2 , class P3 , class P4 , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 , class T\+P4 $>$ }\\\hyperlink{class_c_b_member_translator4}{C\+B\+Member\+Translator4}$<$ P1, P2, \\*
+P3, P4, const Callee, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1, \\*
+T\+P2, T\+P3, T\+P4) const  $>$ \hyperlink{callback_8h_af7d64790fc47effeb22f1722e218e821}{make\+Functor} (\hyperlink{class_c_b_functor4}{C\+B\+Functor4}$<$ P1, P2, P3, P4 $>$ $\ast$, const Callee \&c, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1, T\+P2, T\+P3, T\+P4) const)
+\item 
+{\footnotesize template$<$class P1 , class P2 , class P3 , class P4 , class T\+R\+T , class T\+P1 , class T\+P2 , class T\+P3 , class T\+P4 $>$ }\\\hyperlink{class_c_b_function_translator4}{C\+B\+Function\+Translator4}$<$ P1, P2, \\*
+P3, P4, T\+R\+T($\ast$)(T\+P1, T\+P2, T\+P3, \\*
+T\+P4)$>$ \hyperlink{callback_8h_a59e5b4a1638c635a601fbb87f106f965}{make\+Functor} (\hyperlink{class_c_b_functor4}{C\+B\+Functor4}$<$ P1, P2, P3, P4 $>$ $\ast$, T\+R\+T($\ast$f)(T\+P1, T\+P2, T\+P3, T\+P4))
+\item 
+{\footnotesize template$<$class P1 , class P2 , class P3 , class P4 , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 $>$ }\\\hyperlink{class_c_b_member_of1st_arg_translator4}{C\+B\+Member\+Of1st\+Arg\+Translator4}\\*
+$<$ P1, P2, P3, P4, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1, \\*
+T\+P2, T\+P3)$>$ \hyperlink{callback_8h_a62ef55008a46fafdb0d81ec6fdbdb1a4}{make\+Functor} (\hyperlink{class_c_b_functor4}{C\+B\+Functor4}$<$ P1, P2, P3, P4 $>$ $\ast$, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1, T\+P2, T\+P3))
+\item 
+{\footnotesize template$<$class P1 , class P2 , class P3 , class P4 , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 $>$ }\\\hyperlink{class_c_b_member_of1st_arg_translator4}{C\+B\+Member\+Of1st\+Arg\+Translator4}\\*
+$<$ P1, P2, P3, P4, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1, \\*
+T\+P2, T\+P3) const  $>$ \hyperlink{callback_8h_a3f842a142ff789b009693ed20009b2c9}{make\+Functor} (\hyperlink{class_c_b_functor4}{C\+B\+Functor4}$<$ P1, P2, P3, P4 $>$ $\ast$, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1, T\+P2, T\+P3) const)
+\item 
+{\footnotesize template$<$class P1 , class P2 , class P3 , class P4 , class R\+T , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 , class T\+P4 $>$ }\\\hyperlink{class_c_b_member_translator4w_ret}{C\+B\+Member\+Translator4w\+Ret}$<$ P1, \\*
+P2, P3, P4, R\+T, Callee, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1, \\*
+T\+P2, T\+P3, T\+P4)$>$ \hyperlink{callback_8h_a394f029ff4e1e58c231bce738e914096}{make\+Functor} (\hyperlink{class_c_b_functor4w_ret}{C\+B\+Functor4w\+Ret}$<$ P1, P2, P3, P4, R\+T $>$ $\ast$, Callee \&c, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1, T\+P2, T\+P3, T\+P4))
+\item 
+{\footnotesize template$<$class P1 , class P2 , class P3 , class P4 , class R\+T , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 , class T\+P4 $>$ }\\\hyperlink{class_c_b_member_translator4w_ret}{C\+B\+Member\+Translator4w\+Ret}$<$ P1, \\*
+P2, P3, P4, R\+T, const Callee, \\*
+T\+R\+T(Call\+Type\+::$\ast$)(T\+P1, T\+P2, T\+P3, \\*
+T\+P4) const  $>$ \hyperlink{callback_8h_aa02937fe442d760bacd5083436c0d29a}{make\+Functor} (\hyperlink{class_c_b_functor4w_ret}{C\+B\+Functor4w\+Ret}$<$ P1, P2, P3, P4, R\+T $>$ $\ast$, const Callee \&c, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1, T\+P2, T\+P3, T\+P4) const)
+\item 
+{\footnotesize template$<$class P1 , class P2 , class P3 , class P4 , class R\+T , class T\+R\+T , class T\+P1 , class T\+P2 , class T\+P3 , class T\+P4 $>$ }\\\hyperlink{class_c_b_function_translator4w_ret}{C\+B\+Function\+Translator4w\+Ret}$<$ P1, \\*
+P2, P3, P4, R\+T, T\+R\+T($\ast$)(T\+P1, \\*
+T\+P2, T\+P3, T\+P4)$>$ \hyperlink{callback_8h_a9f256e0c8418bda6e51220b762bd3317}{make\+Functor} (\hyperlink{class_c_b_functor4w_ret}{C\+B\+Functor4w\+Ret}$<$ P1, P2, P3, P4, R\+T $>$ $\ast$, T\+R\+T($\ast$f)(T\+P1, T\+P2, T\+P3, T\+P4))
+\item 
+{\footnotesize template$<$class P1 , class P2 , class P3 , class P4 , class R\+T , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 $>$ }\\\hyperlink{class_c_b_member_of1st_arg_translator4w_ret}{C\+B\+Member\+Of1st\+Arg\+Translator4w\+Ret}\\*
+$<$ P1, P2, P3, P4, R\+T, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1, \\*
+T\+P2, T\+P3)$>$ \hyperlink{callback_8h_a33eeab6096e004e29052b0a70303394a}{make\+Functor} (\hyperlink{class_c_b_functor4w_ret}{C\+B\+Functor4w\+Ret}$<$ P1, P2, P3, P4, R\+T $>$ $\ast$, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1, T\+P2, T\+P3))
+\item 
+{\footnotesize template$<$class P1 , class P2 , class P3 , class P4 , class R\+T , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 $>$ }\\\hyperlink{class_c_b_member_of1st_arg_translator4w_ret}{C\+B\+Member\+Of1st\+Arg\+Translator4w\+Ret}\\*
+$<$ P1, P2, P3, P4, R\+T, T\+R\+T(Call\+Type\+::$\ast$)(T\+P1, \\*
+T\+P2, T\+P3) const  $>$ \hyperlink{callback_8h_a4758275d4cfed2ccb41aaa8e1d6ee6c5}{make\+Functor} (\hyperlink{class_c_b_functor4w_ret}{C\+B\+Functor4w\+Ret}$<$ P1, P2, P3, P4, R\+T $>$ $\ast$, T\+R\+T(Call\+Type\+::$\ast$const \&f)(T\+P1, T\+P2, T\+P3) const)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{callback_8h_a39ae3eb0355dd281e19ad7aaf9066666}{\index{callback.\+h@{callback.\+h}!B\+C4\+\_\+\+R\+E\+T\+\_\+\+B\+U\+G@{B\+C4\+\_\+\+R\+E\+T\+\_\+\+B\+U\+G}}
+\index{B\+C4\+\_\+\+R\+E\+T\+\_\+\+B\+U\+G@{B\+C4\+\_\+\+R\+E\+T\+\_\+\+B\+U\+G}!callback.\+h@{callback.\+h}}
+\subsubsection[{B\+C4\+\_\+\+R\+E\+T\+\_\+\+B\+U\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+C4\+\_\+\+R\+E\+T\+\_\+\+B\+U\+G(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~x}}\label{callback_8h_a39ae3eb0355dd281e19ad7aaf9066666}
+
+
+Definition at line 214 of file callback.\+h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{callback_8h_aeed79d4ab5ab2a84f409fecf4c27f70c}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Callee , class T\+R\+T , class Call\+Type $>$ {\bf C\+B\+Member\+Translator0}$<$Callee,T\+R\+T (Call\+Type\+::$\ast$)()$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor0} $\ast$}]{, }
+\item[{Callee \&}]{c, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)()}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_aeed79d4ab5ab2a84f409fecf4c27f70c}
+
+
+Definition at line 300 of file callback.\+h.
+
+\hypertarget{callback_8h_ae18fa05d2027346c574d8a4c021b47a6}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Callee , class T\+R\+T , class Call\+Type $>$ {\bf C\+B\+Member\+Translator0}$<$const Callee,T\+R\+T (Call\+Type\+::$\ast$)()const$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor0} $\ast$}]{, }
+\item[{const Callee \&}]{c, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)() const}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_ae18fa05d2027346c574d8a4c021b47a6}
+
+
+Definition at line 308 of file callback.\+h.
+
+\hypertarget{callback_8h_a2dfb7f039435c07ed3c9182d362a507b}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T\+R\+T $>$ {\bf C\+B\+Function\+Translator0}$<$T\+R\+T ($\ast$)()$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor0} $\ast$}]{, }
+\item[{T\+R\+T($\ast$)()}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a2dfb7f039435c07ed3c9182d362a507b}
+
+
+Definition at line 316 of file callback.\+h.
+
+\hypertarget{callback_8h_ac0eace7255bdbc552cb5b29e314c229d}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class R\+T , class Callee , class T\+R\+T , class Call\+Type $>$ {\bf C\+B\+Member\+Translator0w\+Ret}$<$R\+T,Callee,T\+R\+T (Call\+Type\+::$\ast$)()$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor0w\+Ret}$<$ R\+T $>$ $\ast$}]{, }
+\item[{Callee \&}]{c, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)()}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_ac0eace7255bdbc552cb5b29e314c229d}
+
+
+Definition at line 364 of file callback.\+h.
+
+\hypertarget{callback_8h_ad994cc9481c0a7b4f26446dcc3a31d5d}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class R\+T , class Callee , class T\+R\+T , class Call\+Type $>$ {\bf C\+B\+Member\+Translator0w\+Ret}$<$R\+T,const Callee,T\+R\+T (Call\+Type\+::$\ast$)()const$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor0w\+Ret}$<$ R\+T $>$ $\ast$}]{, }
+\item[{const Callee \&}]{c, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)() const}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_ad994cc9481c0a7b4f26446dcc3a31d5d}
+
+
+Definition at line 372 of file callback.\+h.
+
+\hypertarget{callback_8h_adc96cc065e5423aeb448e779171535d3}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class R\+T , class T\+R\+T $>$ {\bf C\+B\+Function\+Translator0w\+Ret}$<$R\+T,T\+R\+T ($\ast$)()$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor0w\+Ret}$<$ R\+T $>$ $\ast$}]{, }
+\item[{T\+R\+T($\ast$)()}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_adc96cc065e5423aeb448e779171535d3}
+
+
+Definition at line 380 of file callback.\+h.
+
+\hypertarget{callback_8h_a68153d97e1ebe65e6531847726f3256c}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 $>$ {\bf C\+B\+Member\+Translator1}$<$P1,Callee,T\+R\+T (Call\+Type\+::$\ast$)(T\+P1)$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor1}$<$ P1 $>$ $\ast$}]{, }
+\item[{Callee \&}]{c, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a68153d97e1ebe65e6531847726f3256c}
+
+
+Definition at line 431 of file callback.\+h.
+
+\hypertarget{callback_8h_a02d41a3fe52d2bf21e1c76428c3e309a}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 $>$ {\bf C\+B\+Member\+Translator1}$<$P1,const Callee,T\+R\+T (Call\+Type\+::$\ast$)(T\+P1)const$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor1}$<$ P1 $>$ $\ast$}]{, }
+\item[{const Callee \&}]{c, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1) const}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a02d41a3fe52d2bf21e1c76428c3e309a}
+
+
+Definition at line 439 of file callback.\+h.
+
+\hypertarget{callback_8h_a85a6002e1b8cdbf0f5fca4d51b9b404b}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class T\+R\+T , class T\+P1 $>$ {\bf C\+B\+Function\+Translator1}$<$P1,T\+R\+T ($\ast$)(T\+P1)$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor1}$<$ P1 $>$ $\ast$}]{, }
+\item[{T\+R\+T($\ast$)(T\+P1)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a85a6002e1b8cdbf0f5fca4d51b9b404b}
+
+
+Definition at line 447 of file callback.\+h.
+
+\hypertarget{callback_8h_ad04d86f93a128ec182d45dc93f5b4903}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class T\+R\+T , class Call\+Type $>$ {\bf C\+B\+Member\+Of1st\+Arg\+Translator1}$<$P1,T\+R\+T (Call\+Type\+::$\ast$)()$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor1}$<$ P1 $>$ $\ast$}]{, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)()}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_ad04d86f93a128ec182d45dc93f5b4903}
+
+
+Definition at line 466 of file callback.\+h.
+
+\hypertarget{callback_8h_a5a1ff87938078b2c5de87264aadb74db}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class T\+R\+T , class Call\+Type $>$ {\bf C\+B\+Member\+Of1st\+Arg\+Translator1}$<$P1,T\+R\+T (Call\+Type\+::$\ast$)()const$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor1}$<$ P1 $>$ $\ast$}]{, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)() const}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a5a1ff87938078b2c5de87264aadb74db}
+
+
+Definition at line 474 of file callback.\+h.
+
+\hypertarget{callback_8h_ac138424b465577a882ec8b8659777e55}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class R\+T , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 $>$ {\bf C\+B\+Member\+Translator1w\+Ret}$<$P1,R\+T,Callee,T\+R\+T (Call\+Type\+::$\ast$)(T\+P1)$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor1w\+Ret}$<$ P1, R\+T $>$ $\ast$}]{, }
+\item[{Callee \&}]{c, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_ac138424b465577a882ec8b8659777e55}
+
+
+Definition at line 529 of file callback.\+h.
+
+\hypertarget{callback_8h_afafd69b562e7568827c42c6eb0cb3940}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class R\+T , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 $>$ {\bf C\+B\+Member\+Translator1w\+Ret}$<$P1,R\+T, const Callee,T\+R\+T (Call\+Type\+::$\ast$)(T\+P1)const$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor1w\+Ret}$<$ P1, R\+T $>$ $\ast$}]{, }
+\item[{const Callee \&}]{c, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1) const}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_afafd69b562e7568827c42c6eb0cb3940}
+
+
+Definition at line 539 of file callback.\+h.
+
+\hypertarget{callback_8h_a0a812d7894464f4c3dd67742e9484656}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class R\+T , class T\+R\+T , class T\+P1 $>$ {\bf C\+B\+Function\+Translator1w\+Ret}$<$P1,R\+T,T\+R\+T ($\ast$)(T\+P1)$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor1w\+Ret}$<$ P1, R\+T $>$ $\ast$}]{, }
+\item[{T\+R\+T($\ast$)(T\+P1)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a0a812d7894464f4c3dd67742e9484656}
+
+
+Definition at line 548 of file callback.\+h.
+
+\hypertarget{callback_8h_a069c7a6ff319747ef99e54173d3e5cc2}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class R\+T , class T\+R\+T , class Call\+Type $>$ {\bf C\+B\+Member\+Of1st\+Arg\+Translator1w\+Ret}$<$P1,R\+T,T\+R\+T (Call\+Type\+::$\ast$)()$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor1w\+Ret}$<$ P1, R\+T $>$ $\ast$}]{, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)()}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a069c7a6ff319747ef99e54173d3e5cc2}
+
+
+Definition at line 567 of file callback.\+h.
+
+\hypertarget{callback_8h_acbaafb355d6968db6a30e8b4c9ee4f42}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class R\+T , class T\+R\+T , class Call\+Type $>$ {\bf C\+B\+Member\+Of1st\+Arg\+Translator1w\+Ret}$<$P1,R\+T,T\+R\+T (Call\+Type\+::$\ast$)()const$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor1w\+Ret}$<$ P1, R\+T $>$ $\ast$}]{, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)() const}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_acbaafb355d6968db6a30e8b4c9ee4f42}
+
+
+Definition at line 575 of file callback.\+h.
+
+\hypertarget{callback_8h_a0115d5f817642722d65875cfa21a6d47}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 $>$ {\bf C\+B\+Member\+Translator2}$<$P1,P2,Callee,T\+R\+T (Call\+Type\+::$\ast$)(T\+P1,T\+P2)$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor2}$<$ P1, P2 $>$ $\ast$}]{, }
+\item[{Callee \&}]{c, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1, T\+P2)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a0115d5f817642722d65875cfa21a6d47}
+
+
+Definition at line 630 of file callback.\+h.
+
+\hypertarget{callback_8h_ad4d4fe9e5bc7b82cebb229b88015306d}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 $>$ {\bf C\+B\+Member\+Translator2}$<$P1,P2,const Callee, T\+R\+T (Call\+Type\+::$\ast$)(T\+P1,T\+P2)const$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor2}$<$ P1, P2 $>$ $\ast$}]{, }
+\item[{const Callee \&}]{c, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1, T\+P2) const}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_ad4d4fe9e5bc7b82cebb229b88015306d}
+
+
+Definition at line 640 of file callback.\+h.
+
+\hypertarget{callback_8h_adeac21b65bd1c3f1ed247044739c455f}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class T\+R\+T , class T\+P1 , class T\+P2 $>$ {\bf C\+B\+Function\+Translator2}$<$P1,P2,T\+R\+T ($\ast$)(T\+P1,T\+P2)$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor2}$<$ P1, P2 $>$ $\ast$}]{, }
+\item[{T\+R\+T($\ast$)(T\+P1, T\+P2)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_adeac21b65bd1c3f1ed247044739c455f}
+
+
+Definition at line 649 of file callback.\+h.
+
+\hypertarget{callback_8h_aa00a652564f884e96fdaac919de47ac7}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class T\+R\+T , class Call\+Type , class T\+P1 $>$ {\bf C\+B\+Member\+Of1st\+Arg\+Translator2}$<$P1,P2,T\+R\+T (Call\+Type\+::$\ast$)(T\+P1)$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor2}$<$ P1, P2 $>$ $\ast$}]{, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_aa00a652564f884e96fdaac919de47ac7}
+
+
+Definition at line 668 of file callback.\+h.
+
+\hypertarget{callback_8h_a716aa6bc207ff9d8a8aeb3ab0e28e546}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class T\+R\+T , class Call\+Type , class T\+P1 $>$ {\bf C\+B\+Member\+Of1st\+Arg\+Translator2}$<$P1,P2,T\+R\+T (Call\+Type\+::$\ast$)(T\+P1)const$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor2}$<$ P1, P2 $>$ $\ast$}]{, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1) const}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a716aa6bc207ff9d8a8aeb3ab0e28e546}
+
+
+Definition at line 676 of file callback.\+h.
+
+\hypertarget{callback_8h_a09f9e715226b2087aeca8e3c77b930ae}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class R\+T , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 $>$ {\bf C\+B\+Member\+Translator2w\+Ret}$<$P1,P2,R\+T,Callee, T\+R\+T (Call\+Type\+::$\ast$)(T\+P1,T\+P2)$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor2w\+Ret}$<$ P1, P2, R\+T $>$ $\ast$}]{, }
+\item[{Callee \&}]{c, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1, T\+P2)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a09f9e715226b2087aeca8e3c77b930ae}
+
+
+Definition at line 734 of file callback.\+h.
+
+\hypertarget{callback_8h_a6e4c4cdba97a187290cd9bef19719f94}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class R\+T , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 $>$ {\bf C\+B\+Member\+Translator2w\+Ret}$<$P1,P2,R\+T,const Callee, T\+R\+T (Call\+Type\+::$\ast$)(T\+P1,T\+P2)const$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor2w\+Ret}$<$ P1, P2, R\+T $>$ $\ast$}]{, }
+\item[{const Callee \&}]{c, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1, T\+P2) const}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a6e4c4cdba97a187290cd9bef19719f94}
+
+
+Definition at line 744 of file callback.\+h.
+
+\hypertarget{callback_8h_a2adb7d7b77985906bc24af30b8ecd9fc}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class R\+T , class T\+R\+T , class T\+P1 , class T\+P2 $>$ {\bf C\+B\+Function\+Translator2w\+Ret}$<$P1,P2,R\+T,T\+R\+T ($\ast$)(T\+P1,T\+P2)$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor2w\+Ret}$<$ P1, P2, R\+T $>$ $\ast$}]{, }
+\item[{T\+R\+T($\ast$)(T\+P1, T\+P2)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a2adb7d7b77985906bc24af30b8ecd9fc}
+
+
+Definition at line 753 of file callback.\+h.
+
+\hypertarget{callback_8h_a9760da25dbc0d63d351d7dcb9c1b7b87}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class R\+T , class T\+R\+T , class Call\+Type , class T\+P1 $>$ {\bf C\+B\+Member\+Of1st\+Arg\+Translator2w\+Ret}$<$P1,P2,R\+T,T\+R\+T (Call\+Type\+::$\ast$)(T\+P1)$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor2w\+Ret}$<$ P1, P2, R\+T $>$ $\ast$}]{, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a9760da25dbc0d63d351d7dcb9c1b7b87}
+
+
+Definition at line 772 of file callback.\+h.
+
+\hypertarget{callback_8h_aa5eaf4e09fcc3cfe74173a43a2042379}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class R\+T , class T\+R\+T , class Call\+Type , class T\+P1 $>$ {\bf C\+B\+Member\+Of1st\+Arg\+Translator2w\+Ret}$<$P1,P2,R\+T,T\+R\+T (Call\+Type\+::$\ast$)(T\+P1)const$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor2w\+Ret}$<$ P1, P2, R\+T $>$ $\ast$}]{, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1) const}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_aa5eaf4e09fcc3cfe74173a43a2042379}
+
+
+Definition at line 780 of file callback.\+h.
+
+\hypertarget{callback_8h_a7e6e1dfca1a3b36d8a16326db92c4c57}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class P3 , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 $>$ {\bf C\+B\+Member\+Translator3}$<$P1,P2,P3,Callee, T\+R\+T (Call\+Type\+::$\ast$)(T\+P1,T\+P2,T\+P3)$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor3}$<$ P1, P2, P3 $>$ $\ast$}]{, }
+\item[{Callee \&}]{c, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1, T\+P2, T\+P3)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a7e6e1dfca1a3b36d8a16326db92c4c57}
+
+
+Definition at line 832 of file callback.\+h.
+
+\hypertarget{callback_8h_a89e37c34ea14f63911b0e318dab6137f}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class P3 , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 $>$ {\bf C\+B\+Member\+Translator3}$<$P1,P2,P3,const Callee, T\+R\+T (Call\+Type\+::$\ast$)(T\+P1,T\+P2,T\+P3)const$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor3}$<$ P1, P2, P3 $>$ $\ast$}]{, }
+\item[{const Callee \&}]{c, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1, T\+P2, T\+P3) const}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a89e37c34ea14f63911b0e318dab6137f}
+
+
+Definition at line 843 of file callback.\+h.
+
+\hypertarget{callback_8h_a7bfc90c80db51b9f26c2d4c8f705d614}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class P3 , class T\+R\+T , class T\+P1 , class T\+P2 , class T\+P3 $>$ {\bf C\+B\+Function\+Translator3}$<$P1,P2,P3,T\+R\+T ($\ast$)(T\+P1,T\+P2,T\+P3)$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor3}$<$ P1, P2, P3 $>$ $\ast$}]{, }
+\item[{T\+R\+T($\ast$)(T\+P1, T\+P2, T\+P3)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a7bfc90c80db51b9f26c2d4c8f705d614}
+
+
+Definition at line 853 of file callback.\+h.
+
+\hypertarget{callback_8h_a13f9f14cd101ca20ab41970c320f2339}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class P3 , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 $>$ {\bf C\+B\+Member\+Of1st\+Arg\+Translator3}$<$P1,P2,P3,T\+R\+T (Call\+Type\+::$\ast$)(T\+P1,T\+P2)$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor3}$<$ P1, P2, P3 $>$ $\ast$}]{, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1, T\+P2)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a13f9f14cd101ca20ab41970c320f2339}
+
+
+Definition at line 873 of file callback.\+h.
+
+\hypertarget{callback_8h_aba4262ea1b5b8e3fafbb2f1e853a8a8e}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class P3 , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 $>$ {\bf C\+B\+Member\+Of1st\+Arg\+Translator3}$<$P1,P2,P3,T\+R\+T (Call\+Type\+::$\ast$)(T\+P1,T\+P2)const$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor3}$<$ P1, P2, P3 $>$ $\ast$}]{, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1, T\+P2) const}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_aba4262ea1b5b8e3fafbb2f1e853a8a8e}
+
+
+Definition at line 882 of file callback.\+h.
+
+\hypertarget{callback_8h_adedc4c9917bbd2a282eeef090455bb94}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class P3 , class R\+T , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 $>$ {\bf C\+B\+Member\+Translator3w\+Ret}$<$P1,P2,P3,R\+T,Callee, T\+R\+T (Call\+Type\+::$\ast$)(T\+P1,T\+P2,T\+P3)$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor3w\+Ret}$<$ P1, P2, P3, R\+T $>$ $\ast$}]{, }
+\item[{Callee \&}]{c, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1, T\+P2, T\+P3)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_adedc4c9917bbd2a282eeef090455bb94}
+
+
+Definition at line 936 of file callback.\+h.
+
+\hypertarget{callback_8h_ad0c95ceb99a3e1fa7d0e1f76addd7011}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class P3 , class R\+T , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 $>$ {\bf C\+B\+Member\+Translator3w\+Ret}$<$P1,P2,P3,R\+T,const Callee, T\+R\+T (Call\+Type\+::$\ast$)(T\+P1,T\+P2,T\+P3)const$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor3w\+Ret}$<$ P1, P2, P3, R\+T $>$ $\ast$}]{, }
+\item[{const Callee \&}]{c, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1, T\+P2, T\+P3) const}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_ad0c95ceb99a3e1fa7d0e1f76addd7011}
+
+
+Definition at line 947 of file callback.\+h.
+
+\hypertarget{callback_8h_ae8e8f3c361bd452de65487539c6c47a0}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class P3 , class R\+T , class T\+R\+T , class T\+P1 , class T\+P2 , class T\+P3 $>$ {\bf C\+B\+Function\+Translator3w\+Ret}$<$P1,P2,P3,R\+T,T\+R\+T ($\ast$)(T\+P1,T\+P2,T\+P3)$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor3w\+Ret}$<$ P1, P2, P3, R\+T $>$ $\ast$}]{, }
+\item[{T\+R\+T($\ast$)(T\+P1, T\+P2, T\+P3)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_ae8e8f3c361bd452de65487539c6c47a0}
+
+
+Definition at line 957 of file callback.\+h.
+
+\hypertarget{callback_8h_ac08535ce546108b9afc52db068b85ee0}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class P3 , class R\+T , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 $>$ {\bf C\+B\+Member\+Of1st\+Arg\+Translator3w\+Ret}$<$P1,P2,P3,R\+T,T\+R\+T (Call\+Type\+::$\ast$)(T\+P1,T\+P2)$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor3w\+Ret}$<$ P1, P2, P3, R\+T $>$ $\ast$}]{, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1, T\+P2)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_ac08535ce546108b9afc52db068b85ee0}
+
+
+Definition at line 977 of file callback.\+h.
+
+\hypertarget{callback_8h_a9205bcca9e490301907f864e1ed892cd}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class P3 , class R\+T , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 $>$ {\bf C\+B\+Member\+Of1st\+Arg\+Translator3w\+Ret}$<$P1,P2,P3,R\+T, T\+R\+T (Call\+Type\+::$\ast$)(T\+P1,T\+P2)const$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor3w\+Ret}$<$ P1, P2, P3, R\+T $>$ $\ast$}]{, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1, T\+P2) const}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a9205bcca9e490301907f864e1ed892cd}
+
+
+Definition at line 987 of file callback.\+h.
+
+\hypertarget{callback_8h_a2968081b83beebedee9d0686c01f6de4}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class P3 , class P4 , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 , class T\+P4 $>$ {\bf C\+B\+Member\+Translator4}$<$P1,P2,P3,P4,Callee, T\+R\+T (Call\+Type\+::$\ast$)(T\+P1,T\+P2,T\+P3,T\+P4)$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor4}$<$ P1, P2, P3, P4 $>$ $\ast$}]{, }
+\item[{Callee \&}]{c, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1, T\+P2, T\+P3, T\+P4)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a2968081b83beebedee9d0686c01f6de4}
+
+
+Definition at line 1043 of file callback.\+h.
+
+\hypertarget{callback_8h_af7d64790fc47effeb22f1722e218e821}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class P3 , class P4 , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 , class T\+P4 $>$ {\bf C\+B\+Member\+Translator4}$<$P1,P2,P3,P4,const Callee, T\+R\+T (Call\+Type\+::$\ast$)(T\+P1,T\+P2,T\+P3,T\+P4)const$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor4}$<$ P1, P2, P3, P4 $>$ $\ast$}]{, }
+\item[{const Callee \&}]{c, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1, T\+P2, T\+P3, T\+P4) const}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_af7d64790fc47effeb22f1722e218e821}
+
+
+Definition at line 1054 of file callback.\+h.
+
+\hypertarget{callback_8h_a59e5b4a1638c635a601fbb87f106f965}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class P3 , class P4 , class T\+R\+T , class T\+P1 , class T\+P2 , class T\+P3 , class T\+P4 $>$ {\bf C\+B\+Function\+Translator4}$<$P1,P2,P3,P4,T\+R\+T ($\ast$)(T\+P1,T\+P2,T\+P3,T\+P4)$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor4}$<$ P1, P2, P3, P4 $>$ $\ast$}]{, }
+\item[{T\+R\+T($\ast$)(T\+P1, T\+P2, T\+P3, T\+P4)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a59e5b4a1638c635a601fbb87f106f965}
+
+
+Definition at line 1064 of file callback.\+h.
+
+\hypertarget{callback_8h_a62ef55008a46fafdb0d81ec6fdbdb1a4}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class P3 , class P4 , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 $>$ {\bf C\+B\+Member\+Of1st\+Arg\+Translator4}$<$P1,P2,P3,P4,T\+R\+T (Call\+Type\+::$\ast$)(T\+P1,T\+P2,T\+P3)$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor4}$<$ P1, P2, P3, P4 $>$ $\ast$}]{, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1, T\+P2, T\+P3)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a62ef55008a46fafdb0d81ec6fdbdb1a4}
+
+
+Definition at line 1084 of file callback.\+h.
+
+\hypertarget{callback_8h_a3f842a142ff789b009693ed20009b2c9}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class P3 , class P4 , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 $>$ {\bf C\+B\+Member\+Of1st\+Arg\+Translator4}$<$P1,P2,P3,P4, T\+R\+T (Call\+Type\+::$\ast$)(T\+P1,T\+P2,T\+P3)const$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor4}$<$ P1, P2, P3, P4 $>$ $\ast$}]{, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1, T\+P2, T\+P3) const}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a3f842a142ff789b009693ed20009b2c9}
+
+
+Definition at line 1094 of file callback.\+h.
+
+\hypertarget{callback_8h_a394f029ff4e1e58c231bce738e914096}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class P3 , class P4 , class R\+T , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 , class T\+P4 $>$ {\bf C\+B\+Member\+Translator4w\+Ret}$<$P1,P2,P3,P4,R\+T,Callee, T\+R\+T (Call\+Type\+::$\ast$)(T\+P1,T\+P2,T\+P3,T\+P4)$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor4w\+Ret}$<$ P1, P2, P3, P4, R\+T $>$ $\ast$}]{, }
+\item[{Callee \&}]{c, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1, T\+P2, T\+P3, T\+P4)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a394f029ff4e1e58c231bce738e914096}
+
+
+Definition at line 1149 of file callback.\+h.
+
+\hypertarget{callback_8h_aa02937fe442d760bacd5083436c0d29a}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class P3 , class P4 , class R\+T , class Callee , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 , class T\+P4 $>$ {\bf C\+B\+Member\+Translator4w\+Ret}$<$P1,P2,P3,P4,R\+T,const Callee, T\+R\+T (Call\+Type\+::$\ast$)(T\+P1,T\+P2,T\+P3,T\+P4)const$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor4w\+Ret}$<$ P1, P2, P3, P4, R\+T $>$ $\ast$}]{, }
+\item[{const Callee \&}]{c, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1, T\+P2, T\+P3, T\+P4) const}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_aa02937fe442d760bacd5083436c0d29a}
+
+
+Definition at line 1160 of file callback.\+h.
+
+\hypertarget{callback_8h_a9f256e0c8418bda6e51220b762bd3317}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class P3 , class P4 , class R\+T , class T\+R\+T , class T\+P1 , class T\+P2 , class T\+P3 , class T\+P4 $>$ {\bf C\+B\+Function\+Translator4w\+Ret}$<$P1,P2,P3,P4,R\+T,T\+R\+T ($\ast$)(T\+P1,T\+P2,T\+P3,T\+P4)$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor4w\+Ret}$<$ P1, P2, P3, P4, R\+T $>$ $\ast$}]{, }
+\item[{T\+R\+T($\ast$)(T\+P1, T\+P2, T\+P3, T\+P4)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a9f256e0c8418bda6e51220b762bd3317}
+
+
+Definition at line 1170 of file callback.\+h.
+
+\hypertarget{callback_8h_a33eeab6096e004e29052b0a70303394a}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class P3 , class P4 , class R\+T , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 $>$ {\bf C\+B\+Member\+Of1st\+Arg\+Translator4w\+Ret}$<$P1,P2,P3,P4,R\+T, T\+R\+T (Call\+Type\+::$\ast$)(T\+P1,T\+P2,T\+P3)$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor4w\+Ret}$<$ P1, P2, P3, P4, R\+T $>$ $\ast$}]{, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1, T\+P2, T\+P3)}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a33eeab6096e004e29052b0a70303394a}
+
+
+Definition at line 1193 of file callback.\+h.
+
+\hypertarget{callback_8h_a4758275d4cfed2ccb41aaa8e1d6ee6c5}{\index{callback.\+h@{callback.\+h}!make\+Functor@{make\+Functor}}
+\index{make\+Functor@{make\+Functor}!callback.\+h@{callback.\+h}}
+\subsubsection[{make\+Functor}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class P1 , class P2 , class P3 , class P4 , class R\+T , class T\+R\+T , class Call\+Type , class T\+P1 , class T\+P2 , class T\+P3 $>$ {\bf C\+B\+Member\+Of1st\+Arg\+Translator4w\+Ret}$<$P1,P2,P3,P4,R\+T, T\+R\+T (Call\+Type\+::$\ast$)(T\+P1,T\+P2,T\+P3)const$>$ make\+Functor (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+B\+Functor4w\+Ret}$<$ P1, P2, P3, P4, R\+T $>$ $\ast$}]{, }
+\item[{T\+R\+T(Call\+Type\+::$\ast$\&)(T\+P1, T\+P2, T\+P3) const}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{callback_8h_a4758275d4cfed2ccb41aaa8e1d6ee6c5}
+
+
+Definition at line 1204 of file callback.\+h.
+

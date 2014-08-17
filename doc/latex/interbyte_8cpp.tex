@@ -1,0 +1,118 @@
+\hypertarget{interbyte_8cpp}{\section{/home/edno/projetos/robot/cmd\+Messenger-\/cpp/src/interbyte.cpp File Reference}
+\label{interbyte_8cpp}\index{/home/edno/projetos/robot/cmd\+Messenger-\/cpp/src/interbyte.\+cpp@{/home/edno/projetos/robot/cmd\+Messenger-\/cpp/src/interbyte.\+cpp}}
+}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$signal.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}serial/serial.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{interbyte_8cpp_aead97c99e70c0da7036fbbe230ef68b6}{print\+Usage} ()
+\item 
+void \hyperlink{interbyte_8cpp_afa2ca8c14c278a379901401cb0873e61}{parser} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+void \hyperlink{interbyte_8cpp_a3597cd9be1dec938cefd909341192d7e}{handler} (int signum)
+\item 
+string \hyperlink{interbyte_8cpp_aae3ba4688e12d52dca80a55b5725b29d}{port} (\char`\"{}/dev/tty\+A\+C\+M0\char`\"{})
+\item 
+string \hyperlink{interbyte_8cpp_ab47173ac1dc3861ef73f00ba52c6f7e2}{input} (\char`\"{}\char`\"{})
+\item 
+int \hyperlink{interbyte_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{interbyte_8cpp_ac4f06ea26ed6bd7ae83b92d64ac10b78}{baudrate} = 9600
+\item 
+uint32\+\_\+t \hyperlink{interbyte_8cpp_ab5627d8d8b095c198e2523c44ca380ac}{timeout} = 1
+\item 
+bool \hyperlink{interbyte_8cpp_ad24ebffc3b7cd5e04988c49fdcb80293}{finish} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{interbyte_8cpp_a3597cd9be1dec938cefd909341192d7e}{\index{interbyte.\+cpp@{interbyte.\+cpp}!handler@{handler}}
+\index{handler@{handler}!interbyte.\+cpp@{interbyte.\+cpp}}
+\subsubsection[{handler}]{\setlength{\rightskip}{0pt plus 5cm}void handler (
+\begin{DoxyParamCaption}
+\item[{int}]{signum}
+\end{DoxyParamCaption}
+)}}\label{interbyte_8cpp_a3597cd9be1dec938cefd909341192d7e}
+
+
+Definition at line 52 of file interbyte.\+cpp.
+
+\hypertarget{interbyte_8cpp_ab47173ac1dc3861ef73f00ba52c6f7e2}{\index{interbyte.\+cpp@{interbyte.\+cpp}!input@{input}}
+\index{input@{input}!interbyte.\+cpp@{interbyte.\+cpp}}
+\subsubsection[{input}]{\setlength{\rightskip}{0pt plus 5cm}string input (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}\char`\"{}}]{}
+\end{DoxyParamCaption}
+)}}\label{interbyte_8cpp_ab47173ac1dc3861ef73f00ba52c6f7e2}
+\hypertarget{interbyte_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{\index{interbyte.\+cpp@{interbyte.\+cpp}!main@{main}}
+\index{main@{main}!interbyte.\+cpp@{interbyte.\+cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{interbyte_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+
+Definition at line 17 of file interbyte.\+cpp.
+
+\hypertarget{interbyte_8cpp_afa2ca8c14c278a379901401cb0873e61}{\index{interbyte.\+cpp@{interbyte.\+cpp}!parser@{parser}}
+\index{parser@{parser}!interbyte.\+cpp@{interbyte.\+cpp}}
+\subsubsection[{parser}]{\setlength{\rightskip}{0pt plus 5cm}void parser (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{interbyte_8cpp_afa2ca8c14c278a379901401cb0873e61}
+
+
+Definition at line 63 of file interbyte.\+cpp.
+
+\hypertarget{interbyte_8cpp_aae3ba4688e12d52dca80a55b5725b29d}{\index{interbyte.\+cpp@{interbyte.\+cpp}!port@{port}}
+\index{port@{port}!interbyte.\+cpp@{interbyte.\+cpp}}
+\subsubsection[{port}]{\setlength{\rightskip}{0pt plus 5cm}string port (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}/dev/tty\+A\+C\+M0\char`\"{}}]{}
+\end{DoxyParamCaption}
+)}}\label{interbyte_8cpp_aae3ba4688e12d52dca80a55b5725b29d}
+\hypertarget{interbyte_8cpp_aead97c99e70c0da7036fbbe230ef68b6}{\index{interbyte.\+cpp@{interbyte.\+cpp}!print\+Usage@{print\+Usage}}
+\index{print\+Usage@{print\+Usage}!interbyte.\+cpp@{interbyte.\+cpp}}
+\subsubsection[{print\+Usage}]{\setlength{\rightskip}{0pt plus 5cm}void print\+Usage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{interbyte_8cpp_aead97c99e70c0da7036fbbe230ef68b6}
+
+
+Definition at line 58 of file interbyte.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{interbyte_8cpp_ac4f06ea26ed6bd7ae83b92d64ac10b78}{\index{interbyte.\+cpp@{interbyte.\+cpp}!baudrate@{baudrate}}
+\index{baudrate@{baudrate}!interbyte.\+cpp@{interbyte.\+cpp}}
+\subsubsection[{baudrate}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t baudrate = 9600}}\label{interbyte_8cpp_ac4f06ea26ed6bd7ae83b92d64ac10b78}
+
+
+Definition at line 12 of file interbyte.\+cpp.
+
+\hypertarget{interbyte_8cpp_ad24ebffc3b7cd5e04988c49fdcb80293}{\index{interbyte.\+cpp@{interbyte.\+cpp}!finish@{finish}}
+\index{finish@{finish}!interbyte.\+cpp@{interbyte.\+cpp}}
+\subsubsection[{finish}]{\setlength{\rightskip}{0pt plus 5cm}bool finish = false}}\label{interbyte_8cpp_ad24ebffc3b7cd5e04988c49fdcb80293}
+
+
+Definition at line 15 of file interbyte.\+cpp.
+
+\hypertarget{interbyte_8cpp_ab5627d8d8b095c198e2523c44ca380ac}{\index{interbyte.\+cpp@{interbyte.\+cpp}!timeout@{timeout}}
+\index{timeout@{timeout}!interbyte.\+cpp@{interbyte.\+cpp}}
+\subsubsection[{timeout}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t timeout = 1}}\label{interbyte_8cpp_ab5627d8d8b095c198e2523c44ca380ac}
+
+
+Definition at line 12 of file interbyte.\+cpp.
+
