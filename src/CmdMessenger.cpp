@@ -22,16 +22,9 @@ using namespace cmd;
 
 /*----------CTOR | DTOR----------*/
 
-CmdMessenger::CmdMessenger(const std::string &port,
-    uint32_t baudrate,
-    const char field_separator,
+CmdMessenger::CmdMessenger(const char field_separator,
     const char cmd_separator,
-    const char esc_character,
-    Timeout timeout,
-    bytesize_t bytesize,
-    parity_t parity,
-    stopbits_t stopbits,
-    flowcontrol_t flowcontrol)
+    const char esc_character)
   :serial_port_(port, baudrate, timeout, bytesize, parity, stopbits, flowcontrol),
   field_separator_(field_separator),
   cmd_separator_(cmd_separator),
@@ -39,7 +32,7 @@ CmdMessenger::CmdMessenger(const std::string &port,
 {
   default_callback_ = 0;
 
-  if(serial_port_.isOpen()) CmdMessenger::flush();
+  //if(serial_port_->isOpen()) CmdMessenger::flush();
 }
 
 CmdMessenger::~CmdMessenger()
@@ -67,7 +60,7 @@ bool CmdMessenger::send(const Cmd &command, bool ack, int ack_id, int simple_tim
 
   } // else
 
-  serial_port_.write(ss.str()); //sends the command!
+  serial_port_->write(ss.str()); //sends the command!
   
   if(ack){ // if ack is required 
     return CmdMessenger::waitCmd(ack_id, simple_timeout); //Verifies if the command arrived or not and returns true if received (false otherwise).
@@ -92,13 +85,13 @@ void CmdMessenger::attach(int cmd_id, CallBack callback)
 
 void CmdMessenger::feedInSerialData()
 {
-    size_t num_bytes = serial_port_.available(); //get the number of bytes available in the port.
+    size_t num_bytes = serial_port_->bytesAvailable(); //get the number of bytes available in the port.
     std::string buf_str = buf_.str(); 
     uint8_t *raw_data = 0;
     size_t bytes_read = 0;
 
     raw_data = new uint8_t[num_bytes]; //allocate memory to hold the command
-    bytes_read = serial_port_.read(raw_data, num_bytes); //read the serial port and get the number of bytes actually read.
+    bytes_read = serial_port_->read(raw_data, num_bytes); //read the serial port and get the number of bytes actually read.
 
     //convert the special character, so that it can be directly compared with the raw_data
     uint8_t cmd_separator = static_cast<uint8_t>(cmd_separator_);
@@ -181,33 +174,6 @@ void CmdMessenger::feedInSerialData()
     delete[] raw_data; //free the alocated memory
 
 }
-/*----------SERIAL SPECIFIC----------*/
-
-//These methods simply call the methods in the serial::Serial serial_port_ object. For more information about each one
-//refer to the serial::Serial documentation!
-
-void CmdMessenger::open()
-{
-  serial_port_.open();
-  CmdMessenger::flush();
-}
-
-bool CmdMessenger::isOpen() const
-{
-  return serial_port_.isOpen();
-}
-
-void CmdMessenger::close()
-{
-  serial_port_.close();
-}
-
-void CmdMessenger::flush()
-{
-    serial_port_.flushInput();
-    serial_port_.flushOutput();
-    serial_port_.flush();
-}
 
 /*----------SETTERS AND GETTERS----------*/
 
@@ -240,73 +206,3 @@ char CmdMessenger::getEscChar() const
 {
   return esc_character_;
 }
-
-void CmdMessenger::setPort(const std::string &port)
-{
-  serial_port_.setPort(port);
-}
-
-void CmdMessenger::setTimeout(Timeout &timeout)
-{
-  serial_port_.setTimeout(timeout);
-}
-
-void CmdMessenger::setTimeout(uint32_t inter_byte_timeout, uint32_t read_timeout_constant, uint32_t read_timeout_multiplier, uint32_t write_timeout_constant, uint32_t write_timeout_multiplier)
-{
-  serial_port_.setTimeout( inter_byte_timeout, read_timeout_constant, read_timeout_multiplier, write_timeout_constant, write_timeout_multiplier);
-}
-
-std::string CmdMessenger::getPort() const
-{
-  return serial_port_.getPort();
-}
-
-void CmdMessenger::setBaudRate(uint32_t baudrate)
-{
-  serial_port_.setBaudrate(baudrate);
-}
-
-uint32_t CmdMessenger::getBaudrate() const
-{
-  return serial_port_.getBaudrate();
-}
-
-void CmdMessenger::setByteSize(bytesize_t bytesize)
-{
-  serial_port_.setBytesize(bytesize);
-}
-
-bytesize_t CmdMessenger::getByteSize() const
-{
-  return serial_port_.getBytesize();
-}
-
-void CmdMessenger::setParity(parity_t parity)
-{
-  serial_port_.setParity(parity);
-}
-
-parity_t CmdMessenger::getParity() const
-{
-  return serial_port_.getParity();
-}
-
-void CmdMessenger::setStopBits(stopbits_t stopbits)
-{
-  serial_port_.setStopbits(stopbits);
-}
-
-stopbits_t CmdMessenger::getStopBits() const
-{
-  return serial_port_.getStopbits();
-}
-
-void CmdMessenger::setFlowControl(flowcontrol_t flowcontrol)
-{
-  serial_port_.setFlowcontrol(flowcontrol);
-}
-
-flowcontrol_t CmdMessenger::getFlowControl() const
-{
-  return serial_port_.getFlowcontrol();
-} 

@@ -9,23 +9,19 @@ project( cmdMessenger-cpp )
 include_directories( ./include/ )
 
 #executáveis
-#add_executable( hello ./src/hello.cpp )
-#add_executable( interbyte ./src/interbyte.cpp )
-#add_executable( teste ./src/teste.cpp )
-#add_executable( token ./src/token.cpp )
-#add_executable( parse ./src/parser.cpp )
 add_executable( led ./src/examples/led.cpp )
 add_executable( sensor ./src/examples/sensor.cpp )
 
+add_executable( tst ./src/tst.cpp )
+
 #bibliotecas
 add_library(messenger SHARED ./src/CmdMessenger.cpp ./src/CmdBase.cpp ./src/CmdSend.cpp ./src/CmdReceived.cpp)
+add_library(serial_transport SHARED ./src/SerialTransport.cpp)
 target_link_libraries(messenger serial)
 
-#target_link_libraries( hello serial )
-#target_link_libraries( interbyte serial )
-#target_link_libraries( teste serial )
 target_link_libraries( led messenger )
 target_link_libraries( sensor messenger )
+target_link_libraries( tst serial )
 
 install(TARGETS messenger DESTINATION lib)
-install(FILES include/CmdBase.h include/CmdMessenger.h include/CmdReceived.h include/CmdSend.h include/callback.h DESTINATION include/CmdMessenger)
+install(FILES include/CmdBase.h include/CmdMessenger.h include/CmdReceived.h include/CmdSend.h include/callback.h include/TransportLayer.h include/SerialTransport.h DESTINATION include/CmdMessenger)
