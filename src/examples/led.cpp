@@ -22,19 +22,19 @@ int main(int argc, char *argv[])
 
     while(true)
     {
-      cout << "'l' liga, 'd' desliga, 'q' sai: ";
+      cout << "'1' turns on, '0' turns off, 'q' quits: ";
       cin >> op;
       cout << endl;
 
       switch(op)
       {
-        case 'l':
+        case '1':
           led << true << CmdEnd();
           arduino.send(led);
           led.clear();
           break;
 
-        case 'd':
+        case '0':
           led << false << CmdEnd();
           arduino.send(led);
           led.clear();
@@ -55,10 +55,8 @@ int main(int argc, char *argv[])
   }
   else
   {
-    cout << "Uso: led 'port'\n";
+    cout << "Usage: led 'port_name'\n";
   }
 
   return 0;
 }
-
-//! \endcode
