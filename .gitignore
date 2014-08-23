@@ -1,5 +1,6 @@
-script.sh
+TODO
 build/
-.ycm_extra_conf.py
-.ycm_extra_conf.pyc
+.ycm*
+src/tst.cpp
+script.sh
 cmdMessenger-cpp.prj
