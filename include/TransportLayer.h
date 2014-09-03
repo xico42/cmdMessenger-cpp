@@ -2,6 +2,9 @@
 #define TRANSPORT_LAYER_H
 
 #include <cstddef>
+#include <string>
+
+#include "v8stdint.h"
 
 using std::size_t;
 
@@ -16,8 +19,9 @@ class TransportLayer
         virtual ~TransportLayer(){}
 
         virtual size_t bytesAvailable() const = 0 ;
-        virtual void read(unsigned char* data, size_t num_bytes) = 0;
-        virtual void write(const unsigned char* data) = 0;
+        virtual size_t read(uint8_t* data, size_t num_bytes) = 0;
+        virtual void write(const uint8_t* data, size_t num_bytes) = 0;
+        virtual void write(const std::string &data) = 0;
         virtual void open()=0;
         virtual void close()=0;
         virtual bool isOpen() const =0;

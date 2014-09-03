@@ -1,3 +1,11 @@
+/*!
+ * \file SerialTransport.h
+ *
+ * \section DESCRPTION
+ * This defines a class that implements the TransportLayer interface. It is based
+ * on the Serial project.
+ */
+
 #ifndef SERIAL_TRANSPORT_H
 #define SERIAL_TRANSPORT_H
 
@@ -43,13 +51,23 @@ namespace cmd{
 class SerialTransport : public TransportLayer
 {
     public:
-        SerialTransport();
-        virtual ~SerialTransport();
+        SerialTransport(const std::string& port="",
+                uint32_t baudrate=9600,
+                Timeout timeout=Timeout(),
+                bytesize_t bytesize=eightbits,
+                parity_t parity=parity_none,
+                stopbits_t stopbits=stopbits_one,
+                flowcontrol_t flowcontrol=flowcontrol_none
+                )
+            :serial_port_(port, baudrate, timeout, bytesize, parity, stopbits, flowcontrol)
+        {}
+
+        virtual ~SerialTransport(){}
 
       /*----------INTERFACE----------*/
 
         size_t bytesAvailable() const;
-        void read(unsigned char *data, size_t num_bytes);
+        size_t read(unsigned char *data, size_t num_bytes);
         void write(const unsigned char *data);
         void setTimeout(int read_timeout_constant, int write_timeout_constant, int inter_byte_timeout=0, int read_timeout_multiplier=0, int write_timeout_multiplier=0);
 

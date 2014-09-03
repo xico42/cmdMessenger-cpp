@@ -84,7 +84,8 @@ namespace cmd{
        * \param flowcontrol Type of flowcontrol used, the default is flowcontrol_none, possible values are: flowcontrol_none, flowcontrol_hardware and flowcontrol_software.
        */
 
-      explicit CmdMessenger( const char field_separator = ',', 
+      explicit CmdMessenger(TransportLayer* transport,
+          const char field_separator = ',', 
           const char cmd_separator = ';', 
           const char esc_character = '/'
           );
@@ -215,7 +216,7 @@ namespace cmd{
     private: 
       /*SERIAL PORT VARIABLES*/
 
-      TransportLayer *serial_port_;
+      TransportLayer *transport_layer_;
 
       std::ostringstream buf_;
       std::vector<uint8_t> raw_data_buf_;

@@ -22,14 +22,15 @@ using namespace cmd;
 
 /*----------CTOR | DTOR----------*/
 
-CmdMessenger::CmdMessenger(const char field_separator,
+CmdMessenger::CmdMessenger(TransportLayer* transport,
+    const char field_separator,
     const char cmd_separator,
     const char esc_character)
-  :serial_port_(port, baudrate, timeout, bytesize, parity, stopbits, flowcontrol),
-  field_separator_(field_separator),
+  :field_separator_(field_separator),
   cmd_separator_(cmd_separator),
   esc_character_(esc_character)
 {
+  transport_layer_ = transport;
   default_callback_ = 0;
 
   //if(serial_port_->isOpen()) CmdMessenger::flush();
@@ -60,7 +61,7 @@ bool CmdMessenger::send(const Cmd &command, bool ack, int ack_id, int simple_tim
 
   } // else
 
-  serial_port_->write(ss.str()); //sends the command!
+  transport_layer_->write( ss.str().c_str() ); //sends the command!
   
   if(ack){ // if ack is required 
     return CmdMessenger::waitCmd(ack_id, simple_timeout); //Verifies if the command arrived or not and returns true if received (false otherwise).
@@ -85,13 +86,13 @@ void CmdMessenger::attach(int cmd_id, CallBack callback)
 
 void CmdMessenger::feedInSerialData()
 {
-    size_t num_bytes = serial_port_->bytesAvailable(); //get the number of bytes available in the port.
+    size_t num_bytes = transport_layer_->bytesAvailable(); //get the number of bytes available in the port.
     std::string buf_str = buf_.str(); 
     uint8_t *raw_data = 0;
     size_t bytes_read = 0;
 
     raw_data = new uint8_t[num_bytes]; //allocate memory to hold the command
-    bytes_read = serial_port_->read(raw_data, num_bytes); //read the serial port and get the number of bytes actually read.
+    bytes_read = transport_layer_->read(raw_data, num_bytes); //read the serial port and get the number of bytes actually read.
 
     //convert the special character, so that it can be directly compared with the raw_data
     uint8_t cmd_separator = static_cast<uint8_t>(cmd_separator_);
