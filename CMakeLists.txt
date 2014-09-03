@@ -24,4 +24,4 @@ target_link_libraries(messenger serial)
 target_link_libraries( tst serial )
 
 install(TARGETS messenger serial_transport DESTINATION lib)
-install(FILES include/CmdBase.h include/CmdMessenger.h include/CmdReceived.h include/CmdSend.h include/callback.h include/TransportLayer.h include/SerialTransport.h DESTINATION include/CmdMessenger)
+install(FILES include/CmdBase.h include/CmdMessenger.h include/CmdReceived.h include/CmdSend.h include/callback.h include/TransportLayer.h include/SerialTransport.h include/v8stdint.h DESTINATION include/CmdMessenger)

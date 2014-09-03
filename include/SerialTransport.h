@@ -67,8 +67,8 @@ class SerialTransport : public TransportLayer
       /*----------INTERFACE----------*/
 
         size_t bytesAvailable() const;
-        size_t read(unsigned char *data, size_t num_bytes);
-        void write(const unsigned char *data);
+        size_t write(const uint8_t *data, size_t num_bytes);
+        size_t write(const std::string &data);
         void setTimeout(int read_timeout_constant, int write_timeout_constant, int inter_byte_timeout=0, int read_timeout_multiplier=0, int write_timeout_multiplier=0);
 
       /*!
