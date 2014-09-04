@@ -12,6 +12,9 @@ using std::size_t;
  * Pure abstract class, or interface, that provides
  * abstraction of transport layer into CmdMessenger. To add a new transport layer
  * simply inherit this class and implement it.
+ *
+ * The implementations should include all necessary settings of the transport, and before
+ * passing any object to CmdMessenger, the transport layer must be fully configured already.
  */
 class TransportLayer
 {
