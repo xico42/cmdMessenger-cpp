@@ -45,60 +45,100 @@
 
 namespace cmd{ 
 
-  class CmdSend : public CmdBase
-  {
-    public:
+    class CmdSend : public CmdBase
+    {
+        public:
 
-      /*----------CTOR | DTOR----------*/
-      CmdSend(int id = 0);
-      virtual ~CmdSend();
+            /*----------CTOR | DTOR----------*/
+            /*!
+             * Constructor for the send command.
+             *
+             * \param id The id of the command to be sent
+             */
+            CmdSend(int id = 0);
+            virtual ~CmdSend();
 
-      /*----------ARGUMENTS----------*/
-      template <typename T>
-      void add(T arg)
-      {
-        if(state_){
-          std::stringstream ss;
-          ss << arg;
-          args_.push_back(arg);
-        }
-      }
+            /*----------ARGUMENTS----------*/
+            /*!
+             * Template method. It adds an argument to the command.
+             *
+             * \param arg The argument to add. Notice that it can be anything. For user-defined types
+             * you should overload the operator std::stringstream& << Type, for your Type.
+             */
+            template <typename T>
+                void add(T arg)
+                {
+                    if(state_){
+                        std::stringstream ss;
+                        ss << arg;
+                        args_.push_back(arg);
+                    }
+                }
 
-      void add(CmdEnd end);
+            /*!
+             * Overloaded method to add an CmdEnd object. Note that cmd::CmdEnd
+             * is an empty class, used only to pass at compile time the information that
+             * the command is completed. Example:
+             *
+             * CmdSend led_cmd(3);
+             *
+             * led.add(true); //adds a boolean
+             * led.add(CmdEnd); //Indicates that the command is ready to be sent.
+             */
+            void add(CmdEnd end);
 
-      template <typename T>
-      CmdSend& operator<<(T arg)
-      {
-        if(state_){
-          std::stringstream ss;
-          ss << arg;
-          args_.push_back(ss.str());
-        } 
-        return *this;
-      }
+            /*!
+             * Overloaded operator to add an argument to the command. To add an user-defined type
+             * you could overload std::stringstream& << Type, for your Type.
+             *
+             * \see CmdSend::add
+             */
+            template <typename T>
+                CmdSend& operator<<(T arg)
+                {
+                    if(state_){
+                        std::stringstream ss;
+                        ss << arg;
+                        args_.push_back(ss.str());
+                    } 
+                    return *this;
+                }
 
-      void operator<<(CmdEnd end);
+            /*!
+             * Same utility as CmdSend::add(CmdEnd end), but for the overloaded insertion operator
+             */
+            void operator<<(CmdEnd end);
+            
+            /*!
+             * Clears the arguments in the command. Use it when you want to 
+             * modify the content of a command.
+             */
+            void clear();
 
-      void clear();
+            /*----------GETTERS----------*/
 
-      /*----------GETTERS----------*/
+            /*!
+             * Gets the state of the command.
+             *
+             * \return A bool that represents the state. True if the command is ready to be sent and false if it is not.
+             */
+            bool getState() const; 
 
-      /*!
-       * Gets the state of the command.
-       *
-       * \return A bool that represents the state. True if the command is ready to be sent and false if it is not.
-       */
-      bool getState() const; 
-      int getNumArgs() const;
+            /*!
+             * Gets the number of arguments in the command.
+             *
+             * \return An int that representes the number of arguments in the command
+             */
+            int getNumArgs() const;
 
-    private:
-      std::vector<std::string> args_;
-      bool state_;
+        private:
+            std::vector<std::string> args_;
+            bool state_;
 
-      //setting the CmdMessenger as friend,
-      //allows a CmdMessenger object to acces the std::vector<std::string> args_ directly.
-      friend class CmdMessenger;
-  }; 
+            //setting the CmdMessenger as friend,
+            //allows a CmdMessenger object to acces the std::vector<std::string> args_ directly.
+            friend class CmdMessenger;
+    }; 
 
 }
 

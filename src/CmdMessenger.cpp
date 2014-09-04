@@ -23,17 +23,17 @@ using namespace cmd;
 /*----------CTOR | DTOR----------*/
 
 CmdMessenger::CmdMessenger(TransportLayer* transport,
-    const char field_separator,
-    const char cmd_separator,
-    const char esc_character)
-  :field_separator_(field_separator),
-  cmd_separator_(cmd_separator),
-  esc_character_(esc_character)
+        const char field_separator,
+        const char cmd_separator,
+        const char esc_character)
+:field_separator_(field_separator),
+    cmd_separator_(cmd_separator),
+    esc_character_(esc_character)
 {
-  transport_layer_ = transport;
-  default_callback_ = 0;
+    transport_layer_ = transport;
+    default_callback_ = 0;
 
-  //if(serial_port_->isOpen()) CmdMessenger::flush();
+    //if(serial_port_->isOpen()) CmdMessenger::flush();
 }
 
 CmdMessenger::~CmdMessenger()
@@ -44,30 +44,30 @@ CmdMessenger::~CmdMessenger()
 
 bool CmdMessenger::send(const Cmd &command, bool ack, int ack_id, int simple_timeout)
 {
-  std::stringstream ss; //stream to hold the command to be sent.
+    std::stringstream ss; //stream to hold the command to be sent.
 
-  if(!command.getNumArgs()) 
-    ss << command.getId() << cmd_separator_; // if there are no arguments to be sent, the stream receives only the command id and the command separator.
-  else
-  {
-    //otherwise, if there are some arguments, we will have to iterate over the std::vector args_    
-    ss << command.getId() << field_separator_;    
+    if(!command.getNumArgs()) 
+        ss << command.getId() << cmd_separator_; // if there are no arguments to be sent, the stream receives only the command id and the command separator.
+    else
+    {
+        //otherwise, if there are some arguments, we will have to iterate over the std::vector args_    
+        ss << command.getId() << field_separator_;    
 
-    for(unsigned long i=0; i<command.args_.size() - 1; i++){ //Note that we go from i = 0, to i = args_.size() - 1, because after the last argument a cmd_separator must be added.
-      ss << command.args_[i] << field_separator_; //adds an argument and the field separator to the stream.
-    }
+        for(unsigned long i=0; i<command.args_.size() - 1; i++){ //Note that we go from i = 0, to i = args_.size() - 1, because after the last argument a cmd_separator must be added.
+            ss << command.args_[i] << field_separator_; //adds an argument and the field separator to the stream.
+        }
 
-    ss << command.args_.back() << cmd_separator_; //finishes the command. Now it is ready to be sent.
+        ss << command.args_.back() << cmd_separator_; //finishes the command. Now it is ready to be sent.
 
-  } // else
+    } // else
 
-  transport_layer_->write( ss.str().c_str() ); //sends the command!
-  
-  if(ack){ // if ack is required 
-    return CmdMessenger::waitCmd(ack_id, simple_timeout); //Verifies if the command arrived or not and returns true if received (false otherwise).
-  } 
+    transport_layer_->write( ss.str().c_str() ); //sends the command!
 
-  return true; //if ack is not required, the function returns true anyway.
+    if(ack){ // if ack is required 
+        return CmdMessenger::waitCmd(ack_id, simple_timeout); //Verifies if the command arrived or not and returns true if received (false otherwise).
+    } 
+
+    return true; //if ack is not required, the function returns true anyway.
 }
 
 bool CmdMessenger::waitCmd(int cmd_id, int simple_timeout)
@@ -76,12 +76,12 @@ bool CmdMessenger::waitCmd(int cmd_id, int simple_timeout)
 
 void CmdMessenger::attach(CallBack callback)
 {
-  default_callback_ = makeFunctor((CallBackFunctor*)0, callback);
+    default_callback_ = makeFunctor((CallBackFunctor*)0, callback);
 }
 
 void CmdMessenger::attach(int cmd_id, CallBack callback)
 {
-  callbacks_[cmd_id] = makeFunctor((CallBackFunctor*)0, callback);
+    callbacks_[cmd_id] = makeFunctor((CallBackFunctor*)0, callback);
 }
 
 void CmdMessenger::feedInSerialData()
@@ -104,7 +104,7 @@ void CmdMessenger::feedInSerialData()
     for(size_t i=0; i<bytes_read; i++){ //go over the pointer 
 
         byte_read = raw_data[i]; 
-        
+
         if(i > 0){ // if this is not the first time in the loop
             if( byte_read == cmd_separator ){ //check if this is the cmd_separator
                 if(raw_data[i-1] == esc_character){ //if the last byte is the escaping character, put it in the buffer
@@ -139,35 +139,35 @@ void CmdMessenger::feedInSerialData()
         }
         else
         { // if this is the first time in the loop, we threat things a bit different, to check the old buffer.
-                 if( byte_read == cmd_separator ){//check if this is the cmd_separator.
-                     //check if the old buffer is empty. If it's, somethings wrong, so just ignore it.
-                    if(!buf_str.empty()){ 
-                        if(last_buf_char == esc_character) buf_ << (char) byte_read; //if the last buf char is a escaping character, escape it.
-                        else
-                        { //if the last char in the old buffer is not a escaping character, we faced the end of a command.
-                            buf_ << (char) byte_read; 
+            if( byte_read == cmd_separator ){//check if this is the cmd_separator.
+                //check if the old buffer is empty. If it's, somethings wrong, so just ignore it.
+                if(!buf_str.empty()){ 
+                    if(last_buf_char == esc_character) buf_ << (char) byte_read; //if the last buf char is a escaping character, escape it.
+                    else
+                    { //if the last char in the old buffer is not a escaping character, we faced the end of a command.
+                        buf_ << (char) byte_read; 
 
-                            //Create the CmdReceived object to handle the command.
-                            CmdReceived command = CmdReceived(buf_.str(), field_separator_, cmd_separator_, esc_character_);
+                        //Create the CmdReceived object to handle the command.
+                        CmdReceived command = CmdReceived(buf_.str(), field_separator_, cmd_separator_, esc_character_);
 
-                            if( callbacks_.count(command.getId()) ){ //check if there is a callback.
-                                callbacks_[command.getId()](command);
-                            }
-                            else
-                            {//if there's no callback attached, call the default (if defined)
-                                if(default_callback_) default_callback_(command);
-                            }
-
-                            //std::cout << "command found: " << buf_.str();
-
-                            buf_.str("");
+                        if( callbacks_.count(command.getId()) ){ //check if there is a callback.
+                            callbacks_[command.getId()](command);
                         }
+                        else
+                        {//if there's no callback attached, call the default (if defined)
+                            if(default_callback_) default_callback_(command);
+                        }
+
+                        //std::cout << "command found: " << buf_.str();
+
+                        buf_.str("");
                     }
                 }
-                else
-                {
-                    buf_ << (char) byte_read;
-                }        
+            }
+            else
+            {
+                buf_ << (char) byte_read;
+            }        
         }
 
     }
@@ -180,30 +180,30 @@ void CmdMessenger::feedInSerialData()
 
 void CmdMessenger::setFieldSep(const char field_separator)
 {
-  field_separator_ = field_separator;
+    field_separator_ = field_separator;
 }
 
 char CmdMessenger::getFieldSep() const
 {
-  return field_separator_;
+    return field_separator_;
 }
 
 void CmdMessenger::setCmdSep( const char cmd_separator )
 {
-  cmd_separator_ = cmd_separator;
+    cmd_separator_ = cmd_separator;
 }
 
 char CmdMessenger::getCmdSep() const
 {
-  return cmd_separator_;
+    return cmd_separator_;
 }
 
 void CmdMessenger::setEscChar( const char esc_character )
 {
-  esc_character_ = esc_character;
+    esc_character_ = esc_character;
 }
 
 char CmdMessenger::getEscChar() const
 {
-  return esc_character_;
+    return esc_character_;
 }

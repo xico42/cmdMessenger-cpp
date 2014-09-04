@@ -48,15 +48,26 @@ class CmdEnd{};
  */
 class CmdBase
 {
-  public:
-    CmdBase(int id = 0);
-    virtual ~CmdBase();
+    public:
+        /*!
+         * Constructor
+         * \param id Optional argument to set the command ID
+         */
+        CmdBase(int id = 0);
+        virtual ~CmdBase();
 
-    void setId(int id);
-    int getId() const;
+        /*!
+         * Sets the command ID
+         */
+        void setId(int id);
 
-  private:
-    int id_;
+        /*!
+         * Gets the id of the command
+         */
+        int getId() const;
+
+    private:
+        int id_; //the command id
 };
 
 #endif

@@ -2,7 +2,7 @@
 
 CmdBase::CmdBase(int id)
 {
-  CmdBase::setId(id);
+    CmdBase::setId(id);
 }
 
 CmdBase::~CmdBase()
@@ -11,10 +11,10 @@ CmdBase::~CmdBase()
 
 void CmdBase::setId(int id)
 {
-  if(id >= 0) id_ = id;
+    if(id >= 0) id_ = id;
 }
 
 int CmdBase::getId() const
 {
-  return id_;
+    return id_;
 }
