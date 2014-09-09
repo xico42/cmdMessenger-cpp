@@ -19,14 +19,13 @@ using std::size_t;
 class TransportLayer
 {
     public:
-        TransportLayer(){}
         virtual ~TransportLayer(){}
 
         /*!
          * Pure virtual method. It should return the number of bytes
          * available, in some buffer, to be read by CmdMessenger.
          */
-        virtual size_t bytesAvailable() const = 0 ;
+        virtual size_t bytesAvailable() = 0 ;
 
         /*!
          * Pure virtual method. The implementation should receive a pointer to the data

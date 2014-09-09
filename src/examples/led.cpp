@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "CmdMessenger.h"
+#include "SerialTransport.h"
 
 using namespace std;
 
@@ -14,11 +15,11 @@ int main(int argc, char *argv[])
   if(argc == 2){
 
     char op;
-    cmd::CmdMessenger arduino(argv[1], 9600);
+    cmd::SerialTransport *serial_port = new cmd::SerialTransport(argv[1], 9600);
+    cmd::CmdMessenger arduino(serial_port);
     cmd::Cmd led(ksetled);
 
-    cmd::Timeout timeout = cmd::Timeout::simpleTimeout(1000);
-    arduino.setTimeout(timeout);
+    serial_port->setTimeout(1000, 1000);
 
     while(true)
     {

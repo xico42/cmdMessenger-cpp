@@ -9,7 +9,7 @@ project( cmdMessenger-cpp )
 include_directories( ./include/ )
 
 #executáveis
-#add_executable( led ./src/examples/led.cpp )
+add_executable( led ./src/examples/led.cpp )
 #add_executable( sensor ./src/examples/sensor.cpp )
 
 add_executable( tst ./src/tst.cpp )
@@ -19,7 +19,7 @@ add_library(messenger SHARED ./src/CmdMessenger.cpp ./src/CmdBase.cpp ./src/CmdS
 add_library(serial_transport SHARED ./src/SerialTransport.cpp)
 target_link_libraries(messenger serial)
 
-#target_link_libraries( led messenger )
+target_link_libraries( led messenger serial_transport )
 #target_link_libraries( sensor messenger )
 target_link_libraries( tst serial )
 
