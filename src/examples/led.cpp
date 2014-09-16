@@ -31,6 +31,8 @@ int main(int argc, char *argv[])
         case '1':
           led << true << CmdEnd();
           arduino.send(led);
+
+          cout << led.getNumArgs() << endl;
           led.clear();
           break;
 

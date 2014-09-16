@@ -60,7 +60,7 @@ namespace cmd{
         if(state_){
           std::stringstream ss;
           ss << arg;
-          args_.push_back(arg);
+          args_.push_back(ss.str());
         }
       }
 
