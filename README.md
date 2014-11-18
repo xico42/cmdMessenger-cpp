@@ -1,1 +1,2 @@
-CMD MESSENGER
+ - [ ] primeiro
+ - [ ] segundo
