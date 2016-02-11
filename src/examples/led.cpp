@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
   if(argc == 2){
 
     char op;
-    cmd::CmdMessenger arduino(argv[1], 9600);
+    cmd::CmdMessenger arduino(argv[1], 115200);
     cmd::Cmd led(ksetled);
 
     cmd::Timeout timeout = cmd::Timeout::simpleTimeout(1000);
